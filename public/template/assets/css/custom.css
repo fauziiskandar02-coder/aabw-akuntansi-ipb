@@ -1,0 +1,9 @@
+/**
+ * Custom styles
+ */
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a i {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  display: inline-block;
+}
