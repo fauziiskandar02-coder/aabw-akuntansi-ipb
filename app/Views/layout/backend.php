@@ -10,9 +10,9 @@
 
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="<?= base_url() ?>/template/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/template/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/template/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="<?= base_url('template/node_modules/bootstrap/dist/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/node_modules/@fortawesome/fontawesome-free/css/all.css') ?>">
 
     <!-- Google Fonts (Space Grotesk, JetBrains Mono, Plus Jakarta Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +22,10 @@
     <!-- CSS Libraries -->
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/template/assets/css/style.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/template/assets/css/components.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/template/assets/css/custom.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/template/assets/css/cyber_theme.css?v=2.3.5">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/components.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/custom.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.5') ?>">
 </head>
 
 <body>
@@ -310,24 +310,24 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="<?= base_url() ?>/template/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="<?= base_url() ?>/template/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="<?= base_url() ?>/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="<?= base_url() ?>/template/node_modules/nicescroll/dist/jquery.nicescroll.min.js"></script>
+    <script src="<?= base_url('template/node_modules/jquery/dist/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('template/node_modules/datatables/media/js/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?= base_url('template/node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+    <script src="<?= base_url('template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
+    <script src="<?= base_url('template/node_modules/nicescroll/dist/jquery.nicescroll.min.js') ?>"></script>
 
-    <script src="<?= base_url() ?>/template/assets/js/stisla.js"></script>
+    <script src="<?= base_url('template/assets/js/stisla.js') ?>"></script>
 
     <!-- Three.js 3D Engine, fflate, FBXLoader, MeshoptDecoder & GLTFLoader -->
-    <script src="<?= base_url() ?>/template/assets/js/three.min.js"></script>
-    <script src="<?= base_url() ?>/template/assets/js/fflate.min.js?v=2.3.5"></script>
-    <script src="<?= base_url() ?>/template/assets/js/FBXLoader.js?v=2.3.5"></script>
-    <script src="<?= base_url() ?>/template/assets/js/meshopt_decoder.js?v=2.3.5"></script>
-    <script src="<?= base_url() ?>/template/assets/js/GLTFLoader.js?v=2.3.5"></script>
-    <script src="<?= base_url() ?>/template/assets/js/hiro_3d.js?v=2.3.5"></script>
+    <script src="<?= base_url('template/assets/js/three.min.js') ?>"></script>
+    <script src="<?= base_url('template/assets/js/fflate.min.js?v=2.3.5') ?>"></script>
+    <script src="<?= base_url('template/assets/js/FBXLoader.js?v=2.3.5') ?>"></script>
+    <script src="<?= base_url('template/assets/js/meshopt_decoder.js?v=2.3.5') ?>"></script>
+    <script src="<?= base_url('template/assets/js/GLTFLoader.js?v=2.3.5') ?>"></script>
+    <script src="<?= base_url('template/assets/js/hiro_3d.js?v=2.3.5') ?>"></script>
 
     <!-- Dynamic Moving Background & Diamond Shutter Page Transition -->
-    <script src="<?= base_url() ?>/template/assets/js/cyber_bg.js"></script>
+    <script src="<?= base_url('template/assets/js/cyber_bg.js') ?>"></script>
     <script src="<?= base_url() ?>/template/assets/js/cyber_transition.js"></script>
 
     <!-- Template JS File -->
