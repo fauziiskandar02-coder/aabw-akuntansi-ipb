@@ -194,6 +194,16 @@ class Database extends Config
     {
         parent::__construct();
 
+        // Override with TiDB Cloud env vars on Vercel
+        if (getenv('TIDB_HOST')) {
+            $this->default['hostname'] = getenv('TIDB_HOST');
+            $this->default['username'] = getenv('TIDB_USER');
+            $this->default['password'] = getenv('TIDB_PASSWORD');
+            $this->default['database'] = getenv('TIDB_DB_NAME') ?: 'aabw';
+            $this->default['port']     = (int)(getenv('TIDB_PORT') ?: 4000);
+            $this->default['encrypt']  = ['ssl_verify_peer' => true];
+        }
+
         // Ensure that we always set the database group to 'tests' if
         // we are currently running an automated test suite, so that
         // we don't overwrite live data on accident.

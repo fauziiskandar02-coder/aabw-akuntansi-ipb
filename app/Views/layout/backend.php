@@ -9,10 +9,10 @@
     <?= $this->renderSection('title') ?>
 
 
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="<?= base_url('template/node_modules/bootstrap/dist/css/bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/node_modules/@fortawesome/fontawesome-free/css/all.css') ?>">
+    <!-- General CSS Files (CDN for deployment compatibility) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-bs4@1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 
     <!-- Google Fonts (Space Grotesk, JetBrains Mono, Plus Jakarta Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -309,12 +309,12 @@
         </div>
     </div>
 
-    <!-- General JS Scripts -->
-    <script src="<?= base_url('template/node_modules/jquery/dist/jquery.min.js') ?>"></script>
-    <script src="<?= base_url('template/node_modules/datatables/media/js/jquery.dataTables.min.js') ?>"></script>
-    <script src="<?= base_url('template/node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
-    <script src="<?= base_url('template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
-    <script src="<?= base_url('template/node_modules/nicescroll/dist/jquery.nicescroll.min.js') ?>"></script>
+    <!-- General JS Scripts (CDN for deployment compatibility) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables.net@1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables.net-bs4@1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/dist/jquery.nicescroll.min.js"></script>
 
     <script src="<?= base_url('template/assets/js/stisla.js') ?>"></script>
 
@@ -328,11 +328,11 @@
 
     <!-- Dynamic Moving Background & Diamond Shutter Page Transition -->
     <script src="<?= base_url('template/assets/js/cyber_bg.js') ?>"></script>
-    <script src="<?= base_url() ?>/template/assets/js/cyber_transition.js"></script>
+    <script src="<?= base_url('template/assets/js/cyber_transition.js') ?>"></script>
 
     <!-- Template JS File -->
-    <script src="<?= base_url() ?>/template/assets/js/scripts.js"></script>
-    <script src="<?= base_url() ?>/template/assets/js/custom.js"></script>
+    <script src="<?= base_url('template/assets/js/scripts.js') ?>"></script>
+    <script src="<?= base_url('template/assets/js/custom.js') ?>"></script>
 
     <!-- Page Specific JS File -->
 </body>
