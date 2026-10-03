@@ -8,6 +8,8 @@
 
     <?= $this->renderSection('title') ?>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="<?= base_url('template/assets/img/aabw_avatar.jpg') ?>">
 
     <!-- General CSS Files (CDN for deployment compatibility) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
