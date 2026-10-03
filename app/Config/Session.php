@@ -60,6 +60,17 @@ class Session extends BaseConfig
      */
     public string $savePath = WRITEPATH . 'session';
 
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Use database sessions on Vercel (serverless = no persistent filesystem)
+        if (getenv('VERCEL') || getenv('database_default_hostname')) {
+            $this->driver   = \CodeIgniter\Session\Handlers\DatabaseHandler::class;
+            $this->savePath = 'ci_sessions';
+        }
+    }
+
     /**
      * --------------------------------------------------------------------------
      * Session Match IP
