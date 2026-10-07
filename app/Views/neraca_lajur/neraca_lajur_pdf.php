@@ -21,13 +21,13 @@
 </head>
 <body>
     <div class="header">
-        <h2>SISTEM INFORMASI AKUNTANSI AABW</h2>
+        <h2>PERUSAHAAN AKN-IPB</h2>
         <h3>NERACA LAJUR (WORKSHEET 10 KOLOM)</h3>
         <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
     </div>
     <div class="divider"></div>
 
-    <table>
+    <table border="1" cellpadding="3" cellspacing="0">
         <thead>
             <tr>
                 <th rowspan="2" width="6%">Ref</th>

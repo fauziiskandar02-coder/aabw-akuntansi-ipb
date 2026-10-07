@@ -20,15 +20,15 @@
 </head>
 <body>
     <div class="header">
-        <h2>SISTEM INFORMASI AKUNTANSI AABW</h2>
+        <h2>PERUSAHAAN AKN-IPB</h2>
         <h3>NERACA SALDO (TRIAL BALANCE)</h3>
         <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
     </div>
     <div class="divider"></div>
 
-    <table>
+    <table border="1" cellpadding="4" cellspacing="0">
         <thead>
-            <tr>
+            <tr style="background-color: #e2e8f0;">
                 <th width="15%">Kode Akun</th>
                 <th width="45%">Nama Akun</th>
                 <th width="20%">Debit (Rp)</th>
@@ -54,10 +54,10 @@
                 $totalKredit += $saldoKre;
             ?>
                 <tr>
-                    <td class="text-center"><?= $row->kode_akun3 ?></td>
-                    <td><?= $row->nama_akun3 ?></td>
-                    <td class="text-right"><?= $saldoDeb > 0 ? number_format($saldoDeb, 0, ',', '.') : '-' ?></td>
-                    <td class="text-right"><?= $saldoKre > 0 ? number_format($saldoKre, 0, ',', '.') : '-' ?></td>
+                    <td width="15%" class="text-center"><?= $row->kode_akun3 ?></td>
+                    <td width="45%"><?= $row->nama_akun3 ?></td>
+                    <td width="20%" class="text-right"><?= $saldoDeb > 0 ? number_format($saldoDeb, 0, ',', '.') : '-' ?></td>
+                    <td width="20%" class="text-right"><?= $saldoKre > 0 ? number_format($saldoKre, 0, ',', '.') : '-' ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
