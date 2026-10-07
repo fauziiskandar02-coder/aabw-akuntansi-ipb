@@ -35,15 +35,15 @@
                             </div>
                             <div class="author-box-job text-muted mb-2">@<?= $user->username ?></div>
 
-                            <ul class="list-group list-group-flush mb-3">
-                                <li class="list-group-item px-0">
-                                    <strong>Email:</strong> <?= $user->email ?>
+                            <ul class="list-group list-group-flush mb-3" style="background: transparent !important;">
+                                <li class="list-group-item px-0" style="background: transparent !important; color: var(--text-main) !important; border-color: var(--border-subtle) !important;">
+                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Email:</strong> <?= $user->email ?>
                                 </li>
-                                <li class="list-group-item px-0">
-                                    <strong>Hak Akses:</strong> <?= ucfirst($user->role ?? 'user') ?>
+                                <li class="list-group-item px-0" style="background: transparent !important; color: var(--text-main) !important; border-color: var(--border-subtle) !important;">
+                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Hak Akses:</strong> <?= ucfirst($user->role ?? 'user') ?>
                                 </li>
-                                <li class="list-group-item px-0">
-                                    <strong>Status Akun:</strong> <span class="badge badge-primary">Aktif</span>
+                                <li class="list-group-item px-0" style="background: transparent !important; color: var(--text-main) !important; border-color: var(--border-subtle) !important;">
+                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Status Akun:</strong> <span class="badge badge-primary">Aktif</span>
                                 </li>
                             </ul>
 

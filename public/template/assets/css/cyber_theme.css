@@ -1556,7 +1556,33 @@ select.form-control option {
   color: var(--text-main) !important;
 }
 
+/* 7. Author Box & List Group Dark Cyber Theme Overrides */
+.card.author-box {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-tech) !important;
+  box-shadow: var(--neo-shadow) !important;
+}
 
+.author-box .author-box-name a {
+  color: var(--cyan-bright) !important;
+  font-family: var(--font-display) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
 
+.author-box .author-box-job {
+  color: var(--cyan-accent) !important;
+  font-family: var(--font-mono) !important;
+}
 
+.list-group-item {
+  background-color: transparent !important;
+  border-color: var(--border-subtle) !important;
+  color: var(--text-main) !important;
+}
 
+.list-group-item strong {
+  color: var(--cyan-accent) !important;
+  font-family: var(--font-mono) !important;
+  margin-right: 8px;
+}
