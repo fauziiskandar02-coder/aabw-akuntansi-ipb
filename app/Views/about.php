@@ -91,7 +91,7 @@
                         <h4 class="text-white mb-0 font-monospace">
                             <i class="fas fa-id-card mr-2 text-cyan"></i> [DOSSIER // STUDENT PROFILE]
                         </h4>
-                        <span class="badge badge-primary font-monospace" style="font-size: 10px;">CLASS D/P2</span>
+                        <span class="badge badge-primary font-monospace" style="font-size: 10px;">CLASS C/P2</span>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

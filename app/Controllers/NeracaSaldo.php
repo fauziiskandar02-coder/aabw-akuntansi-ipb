@@ -6,7 +6,7 @@ use App\Models\ModelTransaksi;
 use CodeIgniter\Controller;
 use TCPDF;
 
-class NeracaSaldo extends Controller
+class NeracaSaldo extends BaseController
 {
     protected ModelTransaksi $objTransaksi;
 

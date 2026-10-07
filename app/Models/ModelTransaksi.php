@@ -79,7 +79,7 @@ class ModelTransaksi extends Model
     public function getNeracaSaldo($tgl_awal = null, $tgl_akhir = null)
     {
         $builder = $this->db->table('tbl_nilai');
-        $builder->select('tbl_nilai.kode_akun3, akun3s.nama_akun3, tbl_transaksi.tanggal, SUM(tbl_nilai.debit) as debit, SUM(tbl_nilai.kredit) as kredit');
+        $builder->select('tbl_nilai.kode_akun3, akun3s.nama_akun3, SUM(tbl_nilai.debit) as debit, SUM(tbl_nilai.kredit) as kredit');
         $builder->join('tbl_transaksi', 'tbl_transaksi.id_transaksi = tbl_nilai.id_transaksi');
         $builder->join('akun3s', 'akun3s.kode_akun3 = tbl_nilai.kode_akun3');
 
@@ -88,7 +88,7 @@ class ModelTransaksi extends Model
             $builder->where('tbl_transaksi.tanggal <=', $tgl_akhir);
         }
 
-        $builder->groupBy('tbl_nilai.kode_akun3');
+        $builder->groupBy('tbl_nilai.kode_akun3, akun3s.nama_akun3');
         $builder->orderBy('tbl_nilai.kode_akun3', 'ASC');
         $query = $builder->get();
         return $query->getResult();

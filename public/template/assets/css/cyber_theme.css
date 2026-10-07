@@ -1468,6 +1468,95 @@ select.form-control option {
   filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.5));
 }
 
+/* 6. Invoice & Detail View Dark Cyber Theme Overrides */
+.invoice {
+  background: var(--bg-card) !important;
+  background-color: rgba(13, 22, 44, 0.95) !important;
+  border: 1px solid var(--border-tech) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--neo-shadow) !important;
+  color: var(--text-main) !important;
+  padding: 30px !important;
+}
+
+.invoice .invoice-title h2 {
+  color: var(--text-main) !important;
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+}
+
+.invoice .invoice-number {
+  color: var(--cyan-accent) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 14px !important;
+}
+
+.invoice hr {
+  border-top: 1px solid var(--border-tech) !important;
+  opacity: 0.6 !important;
+}
+
+.invoice address {
+  color: var(--text-sub) !important;
+  line-height: 1.7 !important;
+}
+
+.invoice address strong {
+  color: var(--text-main) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.invoice .section-title {
+  color: var(--cyan-accent) !important;
+  font-family: var(--font-display) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.invoice .table {
+  color: var(--text-main) !important;
+  background-color: transparent !important;
+}
+
+.invoice .table thead th {
+  background-color: rgba(8, 15, 32, 0.9) !important;
+  border-color: var(--border-tech) !important;
+  color: var(--cyan-accent) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.invoice .table tbody td {
+  border-color: var(--border-subtle) !important;
+  color: var(--text-main) !important;
+  background-color: transparent !important;
+}
+
+.invoice .table tbody tr:hover td {
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+.invoice .table tfoot tr,
+.invoice .table tfoot tr.bg-light {
+  background-color: rgba(8, 15, 32, 0.95) !important;
+  border-top: 2px solid var(--border-tech) !important;
+  color: var(--text-main) !important;
+}
+
+.invoice .table tfoot td {
+  border-color: var(--border-tech) !important;
+  color: var(--text-main) !important;
+}
+
+
 
 
 

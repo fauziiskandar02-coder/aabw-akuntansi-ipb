@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <title>Buku Besar (Posting)</title>
     <style>
-        body { font-family: helvetica, sans-serif; font-size: 9pt; color: #333; }
-        .header { text-align: center; margin-bottom: 15px; }
-        .header h2 { margin: 0; padding: 0; font-size: 15pt; color: #111; }
-        .header h3 { margin: 4px 0; font-size: 11pt; font-weight: normal; }
-        .header p { margin: 0; font-size: 8.5pt; color: #666; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th { background-color: #f2f2f2; border: 0.5px solid #666; padding: 5px 3px; font-size: 8.5pt; text-align: center; }
-        td { border: 0.5px solid #888; padding: 4px 3px; font-size: 8.5pt; }
+        body { font-family: helvetica, Arial, sans-serif; font-size: 8.5pt; color: #1e293b; }
+        .header { text-align: center; margin-bottom: 12px; }
+        .header h2 { margin: 0; padding: 0; font-size: 14pt; color: #0f172a; font-weight: bold; letter-spacing: 0.5px; }
+        .header h3 { margin: 3px 0; font-size: 10.5pt; color: #334155; font-weight: bold; }
+        .header p { margin: 2px 0 0 0; font-size: 8pt; color: #64748b; }
+        .divider { border-bottom: 1.5px solid #0284c7; margin-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+        th { background-color: #f1f5f9; border: 0.5px solid #94a3b8; padding: 5px 3px; font-size: 8pt; text-align: center; font-weight: bold; color: #0f172a; }
+        td { border: 0.5px solid #cbd5e1; padding: 4px 3px; font-size: 7.8pt; color: #1e293b; }
         .text-center { text-align: center; }
         .text-right { text-align: right; }
-        .total-row { background-color: #f9f9f9; font-weight: bold; }
+        .total-row td { background-color: #f8fafc; font-weight: bold; border-top: 1px solid #475569; border-bottom: 1.5px solid #0f172a; }
     </style>
 </head>
 <body>
@@ -23,20 +24,21 @@
         <h3>BUKU BESAR (POSTING)</h3>
         <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
     </div>
+    <div class="divider"></div>
 
-    <table>
+    <table cellpadding="4">
         <thead>
-            <tr>
-                <th rowspan="2" width="10%">Tanggal</th>
-                <th rowspan="2" width="30%">Keterangan</th>
+            <tr style="background-color: #e2e8f0;">
+                <th rowspan="2" width="9%">Tanggal</th>
+                <th rowspan="2" width="29%">Keterangan</th>
                 <th rowspan="2" width="8%">Ref</th>
                 <th rowspan="2" width="13%">Debit (Rp)</th>
                 <th rowspan="2" width="13%">Kredit (Rp)</th>
-                <th colspan="2" width="26%">Saldo (Rp)</th>
+                <th colspan="2" width="28%">Saldo (Rp)</th>
             </tr>
-            <tr>
-                <th width="13%">Debit</th>
-                <th width="13%">Kredit</th>
+            <tr style="background-color: #e2e8f0;">
+                <th width="14%">Debit</th>
+                <th width="14%">Kredit</th>
             </tr>
         </thead>
         <tbody>
@@ -74,7 +76,7 @@
                 <td colspan="3" class="text-right"><strong>TOTAL:</strong></td>
                 <td class="text-right"><strong><?= number_format($totDebit, 0, ',', '.') ?></strong></td>
                 <td class="text-right"><strong><?= number_format($totKredit, 0, ',', '.') ?></strong></td>
-                <td colspan="2" class="text-center"><strong>Saldo Akhir: <?= number_format(abs($saldo), 0, ',', '.') ?></strong></td>
+                <td colspan="2" class="text-center"><strong>Saldo Akhir: Rp <?= number_format(abs($saldo), 0, ',', '.') ?></strong></td>
             </tr>
         </tfoot>
     </table>

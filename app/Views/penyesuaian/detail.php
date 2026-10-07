@@ -11,8 +11,8 @@
     </div>
 
     <div class="section-body">
-        <div class="invoice">
-            <div class="invoice-print">
+        <div class="card invoice tech-blueprint-card" style="background: var(--bg-card) !important; border: 1px solid var(--border-tech) !important; color: var(--text-main) !important;">
+            <div class="invoice-print p-4">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="invoice-title">

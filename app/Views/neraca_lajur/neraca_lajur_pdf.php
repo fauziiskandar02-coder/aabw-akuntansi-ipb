@@ -4,18 +4,19 @@
     <meta charset="utf-8">
     <title>Neraca Lajur (Worksheet)</title>
     <style>
-        body { font-family: helvetica, sans-serif; font-size: 8pt; color: #222; }
-        .header { text-align: center; margin-bottom: 12px; }
-        .header h2 { margin: 0; padding: 0; font-size: 14pt; color: #111; }
-        .header h3 { margin: 3px 0; font-size: 10pt; font-weight: normal; }
-        .header p { margin: 0; font-size: 8pt; color: #555; }
-        table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-        th { background-color: #f2f2f2; border: 0.5px solid #555; padding: 4px 2px; font-size: 7.5pt; text-align: center; }
-        td { border: 0.5px solid #777; padding: 3px 2px; font-size: 7.5pt; }
+        body { font-family: helvetica, Arial, sans-serif; font-size: 7.5pt; color: #1e293b; }
+        .header { text-align: center; margin-bottom: 10px; }
+        .header h2 { margin: 0; padding: 0; font-size: 13pt; color: #0f172a; font-weight: bold; }
+        .header h3 { margin: 2px 0; font-size: 9.5pt; color: #334155; font-weight: bold; }
+        .header p { margin: 1px 0 0 0; font-size: 7.5pt; color: #64748b; }
+        .divider { border-bottom: 1.5px solid #0284c7; margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+        th { background-color: #f1f5f9; border: 0.5px solid #94a3b8; padding: 3px 2px; font-size: 7pt; text-align: center; font-weight: bold; color: #0f172a; }
+        td { border: 0.5px solid #cbd5e1; padding: 2.5px 2px; font-size: 6.8pt; color: #1e293b; }
         .text-center { text-align: center; }
         .text-right { text-align: right; }
-        .total-row { background-color: #f9f9f9; font-weight: bold; }
-        .laba-row { background-color: #fff3cd; font-weight: bold; }
+        .total-row td { background-color: #f8fafc; font-weight: bold; border-top: 1px solid #475569; }
+        .laba-row td { background-color: #fef3c7; font-weight: bold; color: #92400e; }
     </style>
 </head>
 <body>
@@ -24,6 +25,7 @@
         <h3>NERACA LAJUR (WORKSHEET 10 KOLOM)</h3>
         <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
     </div>
+    <div class="divider"></div>
 
     <table>
         <thead>
