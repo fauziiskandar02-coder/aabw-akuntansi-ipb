@@ -55,7 +55,11 @@
                             $totalKredit = 0;
                             foreach ($dtneraca as $row) :
                                 $firstDigit = substr((string)$row->kode_akun3, 0, 1);
-                                if ($firstDigit == '1' || $firstDigit == '5') {
+                                $isDebitNormal = ($firstDigit == '1' && $row->kode_akun3 != 1202)
+                                              || $firstDigit == '5'
+                                              || substr((string)$row->kode_akun3, 0, 2) == '32';
+
+                                if ($isDebitNormal) {
                                     $net = $row->debit - $row->kredit;
                                     $saldoDeb = ($net >= 0) ? $net : 0;
                                     $saldoKre = ($net < 0) ? abs($net) : 0;
