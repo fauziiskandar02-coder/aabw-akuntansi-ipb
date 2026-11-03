@@ -103,22 +103,10 @@ class SeederAkun3 extends Seeder
                 'kode_akun1' => 3,
                 'kode_akun2' => 31,
             ],
-            [
-                'kode_akun3' => 3102,
-                'nama_akun3' => 'Modal Lainnya',
-                'kode_akun1' => 3,
-                'kode_akun2' => 31,
-            ],
             // 32 Prive Pemilik
             [
                 'kode_akun3' => 3201,
                 'nama_akun3' => 'Prive Tuan Najwan',
-                'kode_akun1' => 3,
-                'kode_akun2' => 32,
-            ],
-            [
-                'kode_akun3' => 3202,
-                'nama_akun3' => 'Prive Tuan A',
                 'kode_akun1' => 3,
                 'kode_akun2' => 32,
             ],
@@ -141,12 +129,6 @@ class SeederAkun3 extends Seeder
             [
                 'kode_akun3' => 4201,
                 'nama_akun3' => 'Pendapatan diluar usaha',
-                'kode_akun1' => 4,
-                'kode_akun2' => 42,
-            ],
-            [
-                'kode_akun3' => 4202,
-                'nama_akun3' => 'Pendapatan lainnya',
                 'kode_akun1' => 4,
                 'kode_akun2' => 42,
             ],
