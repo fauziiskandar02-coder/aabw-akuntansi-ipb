@@ -26,32 +26,32 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Tanggal Penyesuaian</label>
-                                <input type="date" class="form-control" name="tanggal" value="<?= $penyesuaian->tanggal ?>" required>
+                                <input type="date" class="form-control" name="tanggal" value="<?= esc($penyesuaian->tanggal) ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Nilai yang Disesuaikan (Rp)</label>
-                                <input type="number" step="any" class="form-control" name="nilai" value="<?= $penyesuaian->nilai ?>" required onkeyup="hitung()" onchange="hitung()">
+                                <input type="number" step="any" class="form-control" name="nilai" value="<?= esc($penyesuaian->nilai) ?>" required onkeyup="hitung()" onchange="hitung()">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Waktu (Bulan)</label>
-                                <input type="number" class="form-control" name="waktu" value="<?= $penyesuaian->waktu ?>" required onkeyup="hitung()" onchange="hitung()">
+                                <input type="number" class="form-control" name="waktu" value="<?= esc($penyesuaian->waktu) ?>" required onkeyup="hitung()" onchange="hitung()">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Jumlah per Penyesuaian</label>
-                                <input type="number" step="any" class="form-control bg-light font-weight-bold" name="jumlah" value="<?= $penyesuaian->jumlah ?>" readonly>
+                                <input type="number" step="any" class="form-control bg-light font-weight-bold" name="jumlah" value="<?= esc($penyesuaian->jumlah) ?>" readonly>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Deskripsi Penyesuaian</label>
-                        <input type="text" class="form-control" name="deskripsi" value="<?= $penyesuaian->deskripsi ?>" required>
+                        <input type="text" class="form-control" name="deskripsi" value="<?= esc($penyesuaian->deskripsi) ?>" required>
                     </div>
 
                     <div class="table-responsive mt-3">
@@ -82,8 +82,8 @@
                                                 <?php endforeach; ?>
                                             </select>
                                         </td>
-                                        <td><input type="number" step="any" class="form-control debit" name="debit[]" value="<?= $nilai->debit ?>" required></td>
-                                        <td><input type="number" step="any" class="form-control kredit" name="kredit[]" value="<?= $nilai->kredit ?>" required></td>
+                                        <td><input type="number" step="any" class="form-control debit" name="debit[]" value="<?= esc($nilai->debit) ?>" required></td>
+                                        <td><input type="number" step="any" class="form-control kredit" name="kredit[]" value="<?= esc($nilai->kredit) ?>" required></td>
                                         <td>
                                             <select class="form-control select2-status" name="id_status[]" required>
                                                 <option value="">-- Status --</option>
@@ -95,7 +95,7 @@
                                             </select>
                                         </td>
                                         <td class="text-center">
-                                            <button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm HapusBaris"><i class="fas fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

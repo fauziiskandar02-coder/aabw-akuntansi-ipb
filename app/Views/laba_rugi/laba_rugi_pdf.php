@@ -17,6 +17,7 @@
         .text-right { text-align: right; }
         .total-row td { background-color: #f8fafc; font-weight: bold; border-top: 1px solid #475569; }
         .laba-row td { background-color: #dcfce7; font-weight: bold; font-size: 9.5pt; color: #166534; border-top: 1.5px solid #16a34a; border-bottom: 2px solid #16a34a; }
+        .rugi-row td { background-color: #fee2e2; font-weight: bold; font-size: 9.5pt; color: #991b1b; border-top: 1.5px solid #dc2626; border-bottom: 2px solid #dc2626; }
     </style>
 </head>
 <body>
@@ -50,6 +51,7 @@
         }
     }
     $labaBersih = $totPendapatan - $totBeban;
+    $isLaba = $labaBersih >= 0;
     ?>
 
     <table border="1" cellpadding="5" cellspacing="0">
@@ -92,9 +94,9 @@
         </tbody>
 
         <tfoot>
-            <tr class="laba-row">
-                <td colspan="2" width="70%" class="text-right"><strong>LABA BERSIH USAHA (NET INCOME):</strong></td>
-                <td width="30%" class="text-right"><strong>Rp <?= number_format($labaBersih, 0, ',', '.') ?></strong></td>
+            <tr class="<?= $isLaba ? 'laba-row' : 'rugi-row' ?>">
+                <td colspan="2" width="70%" class="text-right"><strong><?= $isLaba ? 'LABA BERSIH USAHA (NET INCOME)' : 'RUGI BERSIH USAHA (NET LOSS)' ?>:</strong></td>
+                <td width="30%" class="text-right"><strong>Rp <?= number_format(abs($labaBersih), 0, ',', '.') ?></strong></td>
             </tr>
         </tfoot>
     </table>

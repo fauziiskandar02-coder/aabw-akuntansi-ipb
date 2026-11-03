@@ -24,7 +24,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>No. Kwitansi</label>
-                                <input type="text" class="form-control" name="kwitansi" value="<?= $kwitansi ?>" readonly>
+                                <input type="text" class="form-control" name="kwitansi" value="<?= esc($kwitansi) ?>" readonly>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -84,7 +84,7 @@
                                         </select>
                                     </td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-sm HapusBaris"><i class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
 
@@ -110,7 +110,7 @@
                                         </select>
                                     </td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-sm HapusBaris"><i class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
                             </tbody>

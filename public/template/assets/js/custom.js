@@ -48,7 +48,7 @@ function Barisbaru() {
     Baris += '</select>';
     Baris += '</td>';
     Baris += '<td class="text-center">';
-    Baris += '<button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>';
+    Baris += '<button type="button" class="btn btn-danger btn-sm HapusBaris" id="HapusBaris"><i class="fas fa-trash"></i></button>';
     Baris += '</td>';
     Baris += '</tr>';
 
@@ -118,7 +118,7 @@ $(document).on('click', '#BarisBaru', function (e) {
     Barisbaru();
 });
 
-$(document).on('click', '#HapusBaris', function (e) {
+$(document).on('click', '#HapusBaris, .HapusBaris', function (e) {
     e.preventDefault();
     $(this).parents('tr').remove();
     $("#tableLoop tbody tr").each(function (index) {

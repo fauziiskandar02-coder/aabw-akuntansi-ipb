@@ -25,11 +25,11 @@
                     <div class="row align-items-end mb-4">
                         <div class="col-md-3">
                             <label>Start Date</label>
-                            <input type="date" class="form-control" name="tgl_awal" value="<?= $tgl_awal ?>">
+                            <input type="date" class="form-control" name="tgl_awal" value="<?= esc($tgl_awal) ?>">
                         </div>
                         <div class="col-md-3">
                             <label>End Date</label>
-                            <input type="date" class="form-control" name="tgl_akhir" value="<?= $tgl_akhir ?>">
+                            <input type="date" class="form-control" name="tgl_akhir" value="<?= esc($tgl_akhir) ?>">
                         </div>
                         <div class="col-md-3">
                             <button type="submit" class="btn btn-primary"><i class="fas fa-filter"></i> Filter / Display</button>
@@ -61,7 +61,7 @@
                             <tr class="font-weight-bold"><td colspan="2">Operating Cash Receipts:</td></tr>
                             <?php foreach ($operasionalMasuk as $om) : ?>
                                 <tr>
-                                    <td class="pl-4"><?= $om['deskripsi'] ?></td>
+                                    <td class="pl-4"><?= esc($om['deskripsi']) ?></td>
                                     <td class="text-right">Rp <?= number_format($om['nilai'], 0, ',', '.') ?></td>
                                 </tr>
                             <?php endforeach; ?>
@@ -69,7 +69,7 @@
                             <tr class="font-weight-bold mt-2"><td colspan="2">Operating Cash Disbursements:</td></tr>
                             <?php foreach ($operasionalKeluar as $ok) : ?>
                                 <tr>
-                                    <td class="pl-4"><?= $ok['deskripsi'] ?></td>
+                                    <td class="pl-4"><?= esc($ok['deskripsi']) ?></td>
                                     <td class="text-right text-danger">( Rp <?= number_format($ok['nilai'], 0, ',', '.') ?> )</td>
                                 </tr>
                             <?php endforeach; ?>
@@ -87,13 +87,13 @@
                         <tbody>
                             <?php foreach ($investasiMasuk as $im) : ?>
                                 <tr>
-                                    <td class="pl-4"><?= $im['deskripsi'] ?></td>
+                                    <td class="pl-4"><?= esc($im['deskripsi']) ?></td>
                                     <td class="text-right">Rp <?= number_format($im['nilai'], 0, ',', '.') ?></td>
                                 </tr>
                             <?php endforeach; ?>
                             <?php foreach ($investasiKeluar as $ik) : ?>
                                 <tr>
-                                    <td class="pl-4"><?= $ik['deskripsi'] ?></td>
+                                    <td class="pl-4"><?= esc($ik['deskripsi']) ?></td>
                                     <td class="text-right text-danger">( Rp <?= number_format($ik['nilai'], 0, ',', '.') ?> )</td>
                                 </tr>
                             <?php endforeach; ?>

@@ -25,11 +25,11 @@
                     <div class="row align-items-end mb-4">
                         <div class="col-md-3">
                             <label>Start Date</label>
-                            <input type="date" class="form-control" name="tgl_awal" value="<?= $tgl_awal ?>">
+                            <input type="date" class="form-control" name="tgl_awal" value="<?= esc($tgl_awal) ?>">
                         </div>
                         <div class="col-md-3">
                             <label>End Date</label>
-                            <input type="date" class="form-control" name="tgl_akhir" value="<?= $tgl_akhir ?>">
+                            <input type="date" class="form-control" name="tgl_akhir" value="<?= esc($tgl_akhir) ?>">
                         </div>
                         <div class="col-md-3">
                             <button type="submit" class="btn btn-primary"><i class="fas fa-filter"></i> Filter / Display</button>
@@ -38,6 +38,9 @@
                     </div>
                 </form>
 
+                <?php 
+                $perubahanNet = $labaBersih - $prive;
+                ?>
                 <div class="table-responsive">
                     <table class="table table-bordered table-md">
                         <tbody>
@@ -46,8 +49,10 @@
                                 <td style="width: 30%" class="text-right font-weight-bold">Rp <?= number_format($modalAwal, 0, ',', '.') ?></td>
                             </tr>
                             <tr>
-                                <td class="pl-4">Net Profit for the Period</td>
-                                <td class="text-right text-success">Rp <?= number_format($labaBersih, 0, ',', '.') ?></td>
+                                <td class="pl-4"><?= $labaBersih >= 0 ? 'Net Profit for the Period' : 'Net Loss for the Period' ?></td>
+                                <td class="text-right <?= $labaBersih >= 0 ? 'text-success' : 'text-danger' ?>">
+                                    <?= $labaBersih >= 0 ? 'Rp ' . number_format($labaBersih, 0, ',', '.') : '( Rp ' . number_format(abs($labaBersih), 0, ',', '.') . ' )' ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="pl-4">Owner's Drawings (Prive)</td>
@@ -55,7 +60,9 @@
                             </tr>
                             <tr class="table-info font-weight-bold">
                                 <td>Net Increase / (Decrease) in Capital</td>
-                                <td class="text-right">Rp <?= number_format($labaBersih - $prive, 0, ',', '.') ?></td>
+                                <td class="text-right <?= $perubahanNet < 0 ? 'text-danger' : '' ?>">
+                                    <?= $perubahanNet >= 0 ? 'Rp ' . number_format($perubahanNet, 0, ',', '.') : '( Rp ' . number_format(abs($perubahanNet), 0, ',', '.') . ' )' ?>
+                                </td>
                             </tr>
                             <tr class="table-success font-weight-bold h5">
                                 <td>ENDING OWNER'S CAPITAL</td>

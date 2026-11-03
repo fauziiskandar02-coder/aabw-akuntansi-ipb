@@ -96,11 +96,13 @@ class ModelTransaksi extends Model
 
     public function getNeracaLajur($tgl_awal = null, $tgl_akhir = null)
     {
+        $bindings = [];
         $whereTrx = "";
         $whereAdj = "";
         if (!empty($tgl_awal) && !empty($tgl_akhir)) {
-            $whereTrx = "WHERE t.tanggal >= '{$tgl_awal}' AND t.tanggal <= '{$tgl_akhir}'";
-            $whereAdj = "WHERE p.tanggal >= '{$tgl_awal}' AND p.tanggal <= '{$tgl_akhir}'";
+            $whereTrx = "WHERE t.tanggal >= ? AND t.tanggal <= ?";
+            $whereAdj = "WHERE p.tanggal >= ? AND p.tanggal <= ?";
+            $bindings = [$tgl_awal, $tgl_akhir, $tgl_awal, $tgl_akhir];
         }
 
         $sql = "SELECT 
@@ -129,7 +131,7 @@ class ModelTransaksi extends Model
                 WHERE (COALESCE(trx.deb_trx, 0) > 0 OR COALESCE(trx.kre_trx, 0) > 0 OR COALESCE(adj.deb_adj, 0) > 0 OR COALESCE(adj.kre_adj, 0) > 0)
                 ORDER BY a.kode_akun3 ASC";
 
-        $query = $this->db->query($sql);
+        $query = $this->db->query($sql, $bindings);
         return $query->getResult();
     }
 }

@@ -26,25 +26,25 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>No. Kwitansi</label>
-                                <input type="text" class="form-control" name="kwitansi" value="<?= $transaksi->kwitansi ?>" readonly>
+                                <input type="text" class="form-control" name="kwitansi" value="<?= esc($transaksi->kwitansi) ?>" readonly>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Tanggal Transaksi</label>
-                                <input type="date" class="form-control" name="tanggal" value="<?= $transaksi->tanggal ?>" required>
+                                <input type="date" class="form-control" name="tanggal" value="<?= esc($transaksi->tanggal) ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Keterangan Jurnal</label>
-                                <input type="text" class="form-control" name="ketjurnal" value="<?= $transaksi->ketjurnal ?>" required>
+                                <input type="text" class="form-control" name="ketjurnal" value="<?= esc($transaksi->ketjurnal) ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Deskripsi</label>
-                                <input type="text" class="form-control" name="deskripsi" value="<?= $transaksi->deskripsi ?>" required>
+                                <input type="text" class="form-control" name="deskripsi" value="<?= esc($transaksi->deskripsi) ?>" required>
                             </div>
                         </div>
                     </div>
@@ -77,8 +77,8 @@
                                                 <?php endforeach; ?>
                                             </select>
                                         </td>
-                                        <td><input type="number" step="any" class="form-control debit" name="debit[]" value="<?= $nilai->debit ?>" required></td>
-                                        <td><input type="number" step="any" class="form-control kredit" name="kredit[]" value="<?= $nilai->kredit ?>" required></td>
+                                        <td><input type="number" step="any" class="form-control debit" name="debit[]" value="<?= esc($nilai->debit) ?>" required></td>
+                                        <td><input type="number" step="any" class="form-control kredit" name="kredit[]" value="<?= esc($nilai->kredit) ?>" required></td>
                                         <td>
                                             <select class="form-control select2-status" name="id_status[]" required>
                                                 <option value="">-- Status --</option>
@@ -90,7 +90,7 @@
                                             </select>
                                         </td>
                                         <td class="text-center">
-                                            <button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm HapusBaris"><i class="fas fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

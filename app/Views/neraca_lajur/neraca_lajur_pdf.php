@@ -17,6 +17,7 @@
         .text-right { text-align: right; }
         .total-row td { background-color: #f8fafc; font-weight: bold; border-top: 1px solid #475569; }
         .laba-row td { background-color: #fef3c7; font-weight: bold; color: #92400e; }
+        .balanced-row td { background-color: #1e293b; font-weight: bold; color: #ffffff; }
     </style>
 </head>
 <body>
@@ -134,6 +135,13 @@
                 <td class="text-right"><?= ($laba < 0) ? number_format(abs($laba), 0, ',', '.') : '-' ?></td>
                 <td class="text-right"><?= ($laba < 0) ? number_format(abs($laba), 0, ',', '.') : '-' ?></td>
                 <td class="text-right"><?= ($laba >= 0) ? number_format($laba, 0, ',', '.') : '-' ?></td>
+            </tr>
+            <tr class="balanced-row">
+                <td colspan="8" class="text-right"><strong>BALANCED TOTAL:</strong></td>
+                <td class="text-right"><?= number_format(max($tot_lr_deb, $tot_lr_kre), 0, ',', '.') ?></td>
+                <td class="text-right"><?= number_format(max($tot_lr_deb, $tot_lr_kre), 0, ',', '.') ?></td>
+                <td class="text-right"><?= number_format(max($tot_nrc_deb, $tot_nrc_kre), 0, ',', '.') ?></td>
+                <td class="text-right"><?= number_format(max($tot_nrc_deb, $tot_nrc_kre), 0, ',', '.') ?></td>
             </tr>
         </tfoot>
     </table>

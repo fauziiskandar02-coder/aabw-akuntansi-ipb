@@ -88,7 +88,7 @@
                                         </select>
                                     </td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-sm HapusBaris"><i class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
 
@@ -114,7 +114,7 @@
                                         </select>
                                     </td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-danger btn-sm" id="HapusBaris"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-sm HapusBaris"><i class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
                             </tbody>

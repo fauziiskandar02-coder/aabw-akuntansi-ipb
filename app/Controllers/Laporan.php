@@ -36,9 +36,9 @@ class Laporan extends Controller
             } elseif ($k1 == 5) {
                 $totBeban += ($row->deb_trx - $row->kre_trx) + ($row->deb_adj - $row->kre_adj);
             } elseif ($row->kode_akun3 == 3101) {
-                $modalAwal += ($row->kre_trx - $row->deb_trx);
+                $modalAwal += ($row->kre_trx - $row->deb_trx) + ($row->kre_adj - $row->deb_adj);
             } elseif ($row->kode_akun3 == 3201) {
-                $prive += ($row->deb_trx - $row->kre_trx);
+                $prive += ($row->deb_trx - $row->kre_trx) + ($row->deb_adj - $row->kre_adj);
             }
         }
 
@@ -96,9 +96,9 @@ class Laporan extends Controller
             } elseif ($k1 == 5) {
                 $totBeban += ($row->deb_trx - $row->kre_trx) + ($row->deb_adj - $row->kre_adj);
             } elseif ($k3 == 3101) {
-                $modalAwal += ($row->kre_trx - $row->deb_trx);
+                $modalAwal += ($row->kre_trx - $row->deb_trx) + ($row->kre_adj - $row->deb_adj);
             } elseif ($k3 == 3201) {
-                $prive += ($row->deb_trx - $row->kre_trx);
+                $prive += ($row->deb_trx - $row->kre_trx) + ($row->deb_adj - $row->kre_adj);
             }
         }
 
