@@ -13,9 +13,6 @@ class ModelAkun3 extends Model
 
     public function ambilrelasi()
     {
-        // Bersihkan akun non-silabus (bawaan latihan video tutorial) dari database secara otomatis
-        $this->db->table('akun3s')->whereIn('kode_akun3', [3102, 3202, 4202])->delete();
-
         $builder = $this->db->table('akun3s');
         $builder->select('akun3s.*, akun1s.nama_akun1, akun2s.nama_akun2');
         $builder->join('akun1s', 'akun1s.kode_akun1 = akun3s.kode_akun1');
@@ -24,11 +21,5 @@ class ModelAkun3 extends Model
         $builder->orderBy('akun3s.kode_akun3', 'ASC');
         $query = $builder->get();
         return $query->getResult();
-    }
-
-    public function findAll(int $limit = 0, int $offset = 0)
-    {
-        $this->whereNotIn('kode_akun3', [3102, 3202, 4202]);
-        return parent::findAll($limit, $offset);
     }
 }

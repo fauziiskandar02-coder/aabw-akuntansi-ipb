@@ -46,7 +46,7 @@ class Transaksi extends ResourceController
     public function new()
     {
         $data['kwitansi'] = $this->objTransaksi->noKwitansi();
-        $data['dtakun3']  = $this->objAkun3->orderBy('kode_akun3', 'ASC')->findAll();
+        $data['dtakun3']  = $this->objAkun3->whereNotIn('kode_akun3', [3102, 3202, 4202])->orderBy('kode_akun3', 'ASC')->findAll();
         $data['dtstatus'] = $this->objStatus->findAll();
         return view('transaksi/new', $data);
     }
@@ -98,7 +98,7 @@ class Transaksi extends ResourceController
         }
         $data['transaksi'] = $transaksi;
         $data['dtnilai']   = $this->objNilai->where('id_transaksi', $id)->findAll();
-        $data['dtakun3']   = $this->objAkun3->orderBy('kode_akun3', 'ASC')->findAll();
+        $data['dtakun3']   = $this->objAkun3->whereNotIn('kode_akun3', [3102, 3202, 4202])->orderBy('kode_akun3', 'ASC')->findAll();
         $data['dtstatus']  = $this->objStatus->findAll();
         return view('transaksi/edit', $data);
     }
@@ -154,7 +154,7 @@ class Transaksi extends ResourceController
 
     public function akun3()
     {
-        $data = $this->objAkun3->orderBy('kode_akun3', 'ASC')->findAll();
+        $data = $this->objAkun3->whereNotIn('kode_akun3', [3102, 3202, 4202])->orderBy('kode_akun3', 'ASC')->findAll();
         return $this->response->setJSON($data);
     }
 

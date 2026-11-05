@@ -45,7 +45,7 @@ class Penyesuaian extends ResourceController
 
     public function new()
     {
-        $data['dtakun3']  = $this->objAkun3->orderBy('kode_akun3', 'ASC')->findAll();
+        $data['dtakun3']  = $this->objAkun3->whereNotIn('kode_akun3', [3102, 3202, 4202])->orderBy('kode_akun3', 'ASC')->findAll();
         $data['dtstatus'] = $this->objStatus->findAll();
         return view('penyesuaian/new', $data);
     }
@@ -98,7 +98,7 @@ class Penyesuaian extends ResourceController
         }
         $data['penyesuaian'] = $penyesuaian;
         $data['dtnilai']     = $this->objNilaiPenyesuaian->where('id_penyesuaian', $id)->findAll();
-        $data['dtakun3']     = $this->objAkun3->orderBy('kode_akun3', 'ASC')->findAll();
+        $data['dtakun3']     = $this->objAkun3->whereNotIn('kode_akun3', [3102, 3202, 4202])->orderBy('kode_akun3', 'ASC')->findAll();
         $data['dtstatus']    = $this->objStatus->findAll();
         return view('penyesuaian/edit', $data);
     }
