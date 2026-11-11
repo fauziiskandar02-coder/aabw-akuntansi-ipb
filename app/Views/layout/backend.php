@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/components.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/custom.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.5') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.6') ?>">
 </head>
 
 <body>
@@ -334,7 +334,7 @@
 
     <!-- Template JS File -->
     <script src="<?= base_url('template/assets/js/scripts.js') ?>"></script>
-    <script src="<?= base_url('template/assets/js/custom.js') ?>"></script>
+    <script src="<?= base_url('template/assets/js/custom.js?v=2.3.6') ?>"></script>
 
     <!-- Page Specific JS File -->
 </body>

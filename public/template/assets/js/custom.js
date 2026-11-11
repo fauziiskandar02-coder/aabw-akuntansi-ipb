@@ -11,30 +11,45 @@ function hapus(id) {
     $('#del-' + id).submit();
 }
 
-// Menu dinamis aktif presisi
+// Menu dinamis aktif presisi & Dropdown submenu persistensi
 $(document).ready(function () {
     var currentUrl = window.location.href.split('?')[0].split('#')[0].replace(/\/$/, "");
     var currentPath = window.location.pathname.replace(/\/$/, "");
 
-    $('ul.sidebar-menu li').removeClass('active');
+    // 1. Tampilkan dropdown yang sudah aktif dari server-side rendering
+    $('ul.sidebar-menu li.nav-item.dropdown.active, ul.sidebar-menu li.dropdown.active').each(function () {
+        $(this).children('ul.dropdown-menu').show().css('display', 'block');
+    });
 
+    $('ul.sidebar-menu li.active').each(function () {
+        var parentDropdown = $(this).closest('li.nav-item.dropdown');
+        if (parentDropdown.length) {
+            parentDropdown.addClass('active');
+            parentDropdown.children('ul.dropdown-menu').show().css('display', 'block');
+        }
+    });
+
+    // 2. Client-side URL exact match verification
     var matched = false;
-
-    // 1. Prioritas Utama: Exact match full URL / Pathname
     $('ul.sidebar-menu li a').each(function () {
         var href = $(this).attr('href');
         if (!href || href === '#' || href === 'javascript:void(0)') return;
 
         var cleanHref = href.split('?')[0].split('#')[0].replace(/\/$/, "");
         if (cleanHref === currentUrl || cleanHref === (window.location.origin + currentPath)) {
+            $('ul.sidebar-menu li').removeClass('active');
             $(this).parent('li').addClass('active');
-            $(this).closest('li.nav-item.dropdown').addClass('active');
+            var dropdown = $(this).closest('li.nav-item.dropdown');
+            if (dropdown.length) {
+                dropdown.addClass('active');
+                dropdown.children('ul.dropdown-menu').show().css('display', 'block');
+            }
             matched = true;
             return false;
         }
     });
 
-    // 2. Fallback: Cocokkan path spesifik jika ada sub-route
+    // 3. Fallback: Path matching jika ada sub-route
     if (!matched && currentPath !== '') {
         $('ul.sidebar-menu li a').each(function () {
             var href = $(this).attr('href');
@@ -43,14 +58,22 @@ $(document).ready(function () {
             try {
                 var linkPath = (new URL(href, window.location.origin)).pathname.replace(/\/$/, "");
                 if (linkPath === currentPath) {
+                    $('ul.sidebar-menu li').removeClass('active');
                     $(this).parent('li').addClass('active');
-                    $(this).closest('li.nav-item.dropdown').addClass('active');
+                    var dropdown = $(this).closest('li.nav-item.dropdown');
+                    if (dropdown.length) {
+                        dropdown.addClass('active');
+                        dropdown.children('ul.dropdown-menu').show().css('display', 'block');
+                    }
                     matched = true;
                     return false;
                 }
             } catch (err) {}
         });
     }
+
+    // Pastikan submenu dari item yang aktif tetap terbuka
+    $('ul.sidebar-menu li.active').closest('li.nav-item.dropdown').children('ul.dropdown-menu').show().css('display', 'block');
 });
 
 // datatables and pagination

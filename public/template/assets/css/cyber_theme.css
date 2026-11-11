@@ -256,9 +256,28 @@ p, a, input, select, textarea, button, .dropdown-item, .nav-link, .modal-body {
    ========================================================================== */
 .main-sidebar {
   background: var(--bg-sidebar) !important;
-  border-right: 1px solid var(--border-tech) !important;
-  box-shadow: 5px 0 30px rgba(0, 0, 0, 0.6) !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.2) !important;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4) !important;
   backdrop-filter: blur(14px);
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.main-sidebar::-webkit-scrollbar,
+#sidebar-wrapper::-webkit-scrollbar,
+.sidebar-menu::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.nicescroll-rails,
+.nicescroll-rails-vr,
+.nicescroll-rails-hr {
+  display: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
 }
 
 .main-sidebar .sidebar-brand {
@@ -309,16 +328,77 @@ p, a, input, select, textarea, button, .dropdown-item, .nav-link, .modal-body {
   font-weight: 700 !important;
 }
 
-/* Sidebar Submenu Dropdown & Active States (Anti-White Fix) */
+/* Sidebar Submenu Dropdown & Active States */
+.main-sidebar .sidebar-menu li.active > ul.dropdown-menu,
+.main-sidebar .sidebar-menu li.dropdown.active > ul.dropdown-menu,
+.main-sidebar .sidebar-menu li.nav-item.dropdown.active > ul.dropdown-menu {
+  display: block !important;
+}
+
 .main-sidebar .sidebar-menu li ul.dropdown-menu,
 .main-sidebar .sidebar-menu li.active ul.dropdown-menu,
-.main-sidebar .sidebar-menu li.active > ul.dropdown-menu,
-body.sidebar-mini .main-sidebar .sidebar-menu li:hover > ul.dropdown-menu,
-body.sidebar-mini .main-sidebar .sidebar-menu li ul.dropdown-menu {
+.main-sidebar .sidebar-menu li.active > ul.dropdown-menu {
   background-color: rgba(6, 11, 23, 0.98) !important;
   background: rgba(6, 11, 23, 0.98) !important;
-  border-left: 2px solid var(--blue-700) !important;
-  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+  border-left: 2px solid rgba(56, 189, 248, 0.4) !important;
+  box-shadow: none !important;
+}
+
+/* Sidebar Mini Cyberpunk Overrides (Fix White Background & Styling on Collapse) */
+body.sidebar-mini .main-sidebar,
+body.sidebar-mini .main-sidebar:after {
+  background: #060b17 !important;
+  background-color: #060b17 !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.2) !important;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.7) !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-brand-sm {
+  background: rgba(6, 11, 23, 0.95) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-brand-sm a {
+  color: var(--cyan-bright) !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li > a {
+  color: var(--text-muted) !important;
+  background: transparent !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li > a:hover {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: var(--cyan-bright) !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li.active > a {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.85) 0%, rgba(2, 132, 199, 0.7) 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.35) !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li ul.dropdown-menu,
+body.sidebar-mini .main-sidebar .sidebar-menu li:hover > ul.dropdown-menu {
+  background: #090f22 !important;
+  background-color: #090f22 !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9) !important;
+  border-radius: 4px;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li ul.dropdown-menu li a,
+body.sidebar-mini .main-sidebar .sidebar-menu li:hover > ul.dropdown-menu li a {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-sub) !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li ul.dropdown-menu li a:hover,
+body.sidebar-mini .main-sidebar .sidebar-menu > li ul.dropdown-menu li.active > a,
+body.sidebar-mini .main-sidebar .sidebar-menu li:hover > ul.dropdown-menu li:hover > a {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: var(--cyan-bright) !important;
 }
 
 .main-sidebar .sidebar-menu li ul.dropdown-menu li a,
