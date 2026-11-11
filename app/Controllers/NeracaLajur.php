@@ -44,8 +44,8 @@ class NeracaLajur extends Controller
         $pdf->SetTitle('Laporan Neraca Lajur (10 Kolom)');
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
-        $pdf->SetMargins(10, 10, 10);
-        $pdf->SetAutoPageBreak(true, 10);
+        $pdf->SetMargins(8, 8, 8);
+        $pdf->SetAutoPageBreak(true, 8);
         $pdf->AddPage();
         $pdf->writeHTML($html, true, false, true, false, '');
 

@@ -320,17 +320,17 @@
 
     <script src="<?= base_url('template/assets/js/stisla.js') ?>"></script>
 
-    <!-- Three.js 3D Engine, fflate, FBXLoader, MeshoptDecoder & GLTFLoader -->
-    <script src="<?= base_url('template/assets/js/three.min.js') ?>"></script>
-    <script src="<?= base_url('template/assets/js/fflate.min.js?v=2.3.5') ?>"></script>
-    <script src="<?= base_url('template/assets/js/FBXLoader.js?v=2.3.5') ?>"></script>
-    <script src="<?= base_url('template/assets/js/meshopt_decoder.js?v=2.3.5') ?>"></script>
-    <script src="<?= base_url('template/assets/js/GLTFLoader.js?v=2.3.5') ?>"></script>
-    <script src="<?= base_url('template/assets/js/hiro_3d.js?v=2.3.5') ?>"></script>
+    <!-- Three.js 3D Engine, fflate, FBXLoader, MeshoptDecoder & GLTFLoader (Async/Deferred to prevent page delay) -->
+    <script defer src="<?= base_url('template/assets/js/three.min.js') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/fflate.min.js?v=2.3.5') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/FBXLoader.js?v=2.3.5') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/meshopt_decoder.js?v=2.3.5') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/GLTFLoader.js?v=2.3.5') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/hiro_3d.js?v=2.3.5') ?>"></script>
 
     <!-- Dynamic Moving Background & Diamond Shutter Page Transition -->
-    <script src="<?= base_url('template/assets/js/cyber_bg.js') ?>"></script>
-    <script src="<?= base_url('template/assets/js/cyber_transition.js') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/cyber_bg.js') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/cyber_transition.js') ?>"></script>
 
     <!-- Template JS File -->
     <script src="<?= base_url('template/assets/js/scripts.js') ?>"></script>

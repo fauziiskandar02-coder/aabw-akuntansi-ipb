@@ -11,12 +11,45 @@ function hapus(id) {
     $('#del-' + id).submit();
 }
 
-// menu dinamis
-var path = location.pathname.split('/');
-var url = location.origin + '/' + path[1];
-$('ul.sidebar-menu li a').each(function () {
-    if ($(this).attr('href') && $(this).attr('href').indexOf(url) !== -1) {
-        $(this).parent().addClass('active').parents('li.nav-item.dropdown').addClass('active');
+// Menu dinamis aktif presisi
+$(document).ready(function () {
+    var currentUrl = window.location.href.split('?')[0].split('#')[0].replace(/\/$/, "");
+    var currentPath = window.location.pathname.replace(/\/$/, "");
+
+    $('ul.sidebar-menu li').removeClass('active');
+
+    var matched = false;
+
+    // 1. Prioritas Utama: Exact match full URL / Pathname
+    $('ul.sidebar-menu li a').each(function () {
+        var href = $(this).attr('href');
+        if (!href || href === '#' || href === 'javascript:void(0)') return;
+
+        var cleanHref = href.split('?')[0].split('#')[0].replace(/\/$/, "");
+        if (cleanHref === currentUrl || cleanHref === (window.location.origin + currentPath)) {
+            $(this).parent('li').addClass('active');
+            $(this).closest('li.nav-item.dropdown').addClass('active');
+            matched = true;
+            return false;
+        }
+    });
+
+    // 2. Fallback: Cocokkan path spesifik jika ada sub-route
+    if (!matched && currentPath !== '') {
+        $('ul.sidebar-menu li a').each(function () {
+            var href = $(this).attr('href');
+            if (!href || href === '#' || href === 'javascript:void(0)') return;
+
+            try {
+                var linkPath = (new URL(href, window.location.origin)).pathname.replace(/\/$/, "");
+                if (linkPath === currentPath) {
+                    $(this).parent('li').addClass('active');
+                    $(this).closest('li.nav-item.dropdown').addClass('active');
+                    matched = true;
+                    return false;
+                }
+            } catch (err) {}
+        });
     }
 });
 
