@@ -268,41 +268,8 @@
     setTimeout(triggerRandomGlitchBurst, nextDelay);
   }
 
-  // --- HIRO SPEECH BUBBLE & INTERACTION ---
-  function setupHiroInteraction() {
-    const badge = document.getElementById('hiro-badge-hud');
-    const bubble = document.getElementById('hiro-speech-bubble');
-    if (!badge || !bubble) return;
-
-    const quotes = [
-      'Koneksi Franxx stabil. Siap mendampingi pembukuan, Operator Bakpauu!',
-      'Neraca lajur (worksheet) telah seimbang & tervalidasi. Code 016 standby!',
-      'Buku besar dan transaksi jurnal sinkron dengan database akuntansi.',
-      'Strelizia link operational 100%. Mari tuntaskan laporan keuangan ini!',
-      'Akun 1, Akun 2, dan Akun 3 siap diposting ke jurnal penyesuaian.'
-    ];
-
-    let quoteIndex = 0;
-    let bubbleTimeout = null;
-
-    function showQuote() {
-      bubble.textContent = quotes[quoteIndex];
-      bubble.style.display = 'block';
-      quoteIndex = (quoteIndex + 1) % quotes.length;
-      playCyberBlip(1350, 'sine', 0.05, 0.04);
-
-      if (bubbleTimeout) clearTimeout(bubbleTimeout);
-      bubbleTimeout = setTimeout(() => {
-        bubble.style.display = 'none';
-      }, 5000);
-    }
-
-    badge.addEventListener('click', showQuote);
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
     setTimeout(triggerRandomGlitchBurst, 2500);
-    setupHiroInteraction();
 
     // Sound feedback on button hover
     const buttons = document.querySelectorAll('.btn, .nav-link, .deck-tab-btn');

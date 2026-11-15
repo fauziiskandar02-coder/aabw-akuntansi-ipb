@@ -329,10 +329,10 @@
     <script defer src="<?= base_url('template/assets/js/FBXLoader.js?v=2.3.5') ?>"></script>
     <script defer src="<?= base_url('template/assets/js/meshopt_decoder.js?v=2.3.5') ?>"></script>
     <script defer src="<?= base_url('template/assets/js/GLTFLoader.js?v=2.3.5') ?>"></script>
-    <script defer src="<?= base_url('template/assets/js/hiro_3d.js?v=2.5.0') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/hiro_3d.js?v=2.5.1') ?>"></script>
 
     <!-- Dynamic Moving Background & Diamond Shutter Page Transition -->
-    <script defer src="<?= base_url('template/assets/js/cyber_bg.js') ?>"></script>
+    <script defer src="<?= base_url('template/assets/js/cyber_bg.js?v=2.5.1') ?>"></script>
     <script defer src="<?= base_url('template/assets/js/cyber_transition.js') ?>"></script>
 
     <!-- Template JS File -->

@@ -416,15 +416,41 @@
 
     if (badgeHud && speechBubble) {
       let speechTimer = null;
-      badgeHud.addEventListener('click', () => {
-        const randomQuote = dialogues[Math.floor(Math.random() * dialogues.length)];
-        speechBubble.innerHTML = `<i class="fas fa-comment-dots mr-1 text-cyan"></i> ${randomQuote}`;
-        speechBubble.classList.add('show');
+      let quoteIdx = 0;
 
-        clearTimeout(speechTimer);
+      function playAudioChirp() {
+        try {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContext) return;
+          const ctx = new AudioContext();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(1400, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.04, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.08);
+        } catch (e) {}
+      }
+
+      badgeHud.addEventListener('click', () => {
+        const quote = dialogues[quoteIdx];
+        quoteIdx = (quoteIdx + 1) % dialogues.length;
+
+        speechBubble.innerHTML = `<i class="fas fa-satellite-dish mr-1 text-cyan"></i> ${quote}`;
+        speechBubble.style.display = 'block';
+        speechBubble.classList.add('show');
+        playAudioChirp();
+
+        if (speechTimer) clearTimeout(speechTimer);
         speechTimer = setTimeout(() => {
+          speechBubble.style.display = 'none';
           speechBubble.classList.remove('show');
-        }, 4500);
+        }, 5000);
       });
     }
   }
