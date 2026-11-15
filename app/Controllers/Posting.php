@@ -49,7 +49,7 @@ class Posting extends Controller
         $pdf = new TCPDF('L', 'mm', 'A4', true, 'UTF-8', false);
         $pdf->SetCreator('SIA AABW');
         $pdf->SetAuthor('AABW Admin');
-        $pdf->SetTitle('Laporan Posting Buku Besar');
+        $pdf->SetTitle('General Ledger Posting Report');
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
         $pdf->SetMargins(15, 15, 15);
@@ -58,7 +58,7 @@ class Posting extends Controller
         $pdf->writeHTML($html, true, false, true, false, '');
 
         $this->response->setContentType('application/pdf');
-        $pdf->Output('Posting_Buku_Besar.pdf', 'I');
+        $pdf->Output('General_Ledger_Posting.pdf', 'I');
         exit;
     }
 }

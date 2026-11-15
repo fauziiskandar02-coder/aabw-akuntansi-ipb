@@ -63,6 +63,22 @@
             $groupedPosting[$row->kode_akun3]['nama'] = $row->nama_akun3;
             $groupedPosting[$row->kode_akun3]['rows'][] = $row;
         }
+        // Strict numerical sorting by account code (1101, 1102, 1103, 1201, 2101, etc.)
+        ksort($groupedPosting, SORT_NUMERIC);
+
+        // Ensure chronological transaction order within each account
+        foreach ($groupedPosting as $kodeAkun => &$accData) {
+            usort($accData['rows'], function ($a, $b) {
+                if ($a->tanggal === $b->tanggal) {
+                    if ($a->id_transaksi === $b->id_transaksi) {
+                        return $a->id_nilai <=> $b->id_nilai;
+                    }
+                    return $a->id_transaksi <=> $b->id_transaksi;
+                }
+                return strcmp($a->tanggal, $b->tanggal);
+            });
+        }
+        unset($accData);
         ?>
 
         <?php if (empty($groupedPosting)) : ?>

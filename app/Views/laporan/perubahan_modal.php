@@ -45,28 +45,30 @@
                     <table class="table table-bordered table-md">
                         <tbody>
                             <tr>
-                                <td style="width: 70%" class="font-weight-bold">Beginning Owner's Capital</td>
-                                <td style="width: 30%" class="text-right font-weight-bold">Rp <?= number_format($modalAwal, 0, ',', '.') ?></td>
+                                <td style="width: 70%" class="font-weight-bold text-white"><i class="fas fa-coins text-cyan mr-2"></i>Beginning Owner's Capital</td>
+                                <td style="width: 30%" class="text-right font-weight-bold font-monospace">Rp <?= number_format($modalAwal, 0, ',', '.') ?></td>
                             </tr>
                             <tr>
-                                <td class="pl-4"><?= $labaBersih >= 0 ? 'Net Profit for the Period' : 'Net Loss for the Period' ?></td>
-                                <td class="text-right <?= $labaBersih >= 0 ? 'text-success' : 'text-danger' ?>">
+                                <td class="pl-4 text-muted"><i class="fas fa-chart-line text-cyan mr-2"></i><?= $labaBersih >= 0 ? 'Net Profit for the Period' : 'Net Loss for the Period' ?></td>
+                                <td class="text-right font-monospace <?= $labaBersih >= 0 ? 'text-success' : 'text-danger' ?>" style="color: <?= $labaBersih >= 0 ? '#34d399' : '#f87171' ?> !important;">
                                     <?= $labaBersih >= 0 ? 'Rp ' . number_format($labaBersih, 0, ',', '.') : '( Rp ' . number_format(abs($labaBersih), 0, ',', '.') . ' )' ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="pl-4">Owner's Drawings (Prive)</td>
-                                <td class="text-right text-danger">( Rp <?= number_format($prive, 0, ',', '.') ?> )</td>
+                                <td class="pl-4 text-muted"><i class="fas fa-hand-holding-usd text-warning mr-2"></i>Owner's Drawings (Prive)</td>
+                                <td class="text-right font-monospace text-danger" style="color: #f87171 !important;">( Rp <?= number_format($prive, 0, ',', '.') ?> )</td>
                             </tr>
-                            <tr class="table-info font-weight-bold">
-                                <td>Net Increase / (Decrease) in Capital</td>
-                                <td class="text-right <?= $perubahanNet < 0 ? 'text-danger' : '' ?>">
+                            <tr class="report-summary-row font-weight-bold">
+                                <td class="text-white"><i class="fas fa-exchange-alt text-cyan mr-2"></i>Net Increase / (Decrease) in Capital</td>
+                                <td class="text-right font-monospace" style="color: <?= $perubahanNet >= 0 ? '#38bdf8' : '#f87171' ?> !important;">
                                     <?= $perubahanNet >= 0 ? 'Rp ' . number_format($perubahanNet, 0, ',', '.') : '( Rp ' . number_format(abs($perubahanNet), 0, ',', '.') . ' )' ?>
                                 </td>
                             </tr>
-                            <tr class="table-success font-weight-bold h5">
-                                <td>ENDING OWNER'S CAPITAL</td>
-                                <td class="text-right">Rp <?= number_format($modalAkhir, 0, ',', '.') ?></td>
+                            <tr class="report-total-row font-weight-bold h6 mb-0">
+                                <td class="text-white" style="letter-spacing: 0.8px;"><i class="fas fa-landmark text-cyan mr-2"></i>ENDING OWNER'S CAPITAL</td>
+                                <td class="text-right font-monospace" style="color: var(--cyan-bright) !important; font-size: 15px; text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);">
+                                    Rp <?= number_format($modalAkhir, 0, ',', '.') ?>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

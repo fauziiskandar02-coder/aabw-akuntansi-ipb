@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Jurnal Umum</title>
+    <title>General Journal</title>
     <style>
         body { font-family: helvetica, Arial, sans-serif; font-size: 8.5pt; color: #1e293b; }
         .header { text-align: center; margin-bottom: 12px; }
@@ -22,20 +22,20 @@
 <body>
     <div class="header">
         <h2>PERUSAHAAN AKN-IPB</h2>
-        <h3>JURNAL UMUM</h3>
-        <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
+        <h3>GENERAL JOURNAL</h3>
+        <p>Period: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Start' ?> to <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'End' ?></p>
     </div>
     <div class="divider"></div>
 
-    <table border="1" cellpadding="4" cellspacing="0">
+    <table border="1" cellpadding="4" cellspacing="0" width="100%">
         <thead>
             <tr style="background-color: #e2e8f0;">
-                <th width="12%">Tanggal</th>
-                <th width="10%">Kwitansi</th>
-                <th width="42%">Keterangan / Akun</th>
+                <th width="12%">Date</th>
+                <th width="10%">Receipt</th>
+                <th width="42%">Account & Description</th>
                 <th width="8%">Ref</th>
                 <th width="14%">Debit (Rp)</th>
-                <th width="14%">Kredit (Rp)</th>
+                <th width="14%">Credit (Rp)</th>
             </tr>
         </thead>
         <tbody>

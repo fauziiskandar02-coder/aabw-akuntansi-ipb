@@ -25,25 +25,25 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>No. Kwitansi</label>
+                                <label>Receipt No.</label>
                                 <input type="text" class="form-control" name="kwitansi" value="<?= esc($transaksi->kwitansi) ?>" readonly>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Tanggal Transaksi</label>
+                                <label>Transaction Date</label>
                                 <input type="date" class="form-control" name="tanggal" value="<?= esc($transaksi->tanggal) ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Keterangan Jurnal</label>
+                                <label>Journal Description</label>
                                 <input type="text" class="form-control" name="ketjurnal" value="<?= esc($transaksi->ketjurnal) ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Deskripsi</label>
+                                <label>Memo / Description</label>
                                 <input type="text" class="form-control" name="deskripsi" value="<?= esc($transaksi->deskripsi) ?>" required>
                             </div>
                         </div>
@@ -53,10 +53,10 @@
                         <table class="table table-bordered table-md" id="tableLoop">
                             <thead class="thead-light">
                                 <tr>
-                                    <th class="text-center" style="width: 5%">No</th>
-                                    <th style="width: 35%">Kode Akun</th>
+                                    <th class="text-center" style="width: 5%">#</th>
+                                    <th style="width: 35%">Account Code</th>
                                     <th style="width: 20%">Debit</th>
-                                    <th style="width: 20%">Kredit</th>
+                                    <th style="width: 20%">Credit</th>
                                     <th style="width: 15%">Status</th>
                                     <th class="text-center" style="width: 5%">
                                         <button type="button" class="btn btn-primary btn-sm" id="BarisBaru"><i class="fas fa-plus"></i></button>

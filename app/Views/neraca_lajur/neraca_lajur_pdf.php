@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Neraca Lajur (Worksheet)</title>
+    <title>Accounting Worksheet</title>
     <style>
         body { font-family: helvetica, Arial, sans-serif; font-size: 7pt; color: #1e293b; margin: 0; padding: 0; }
         .header { text-align: center; margin-bottom: 8px; width: 100%; }
@@ -23,8 +23,8 @@
 <body>
     <div class="header">
         <h2>PERUSAHAAN AKN-IPB</h2>
-        <h3>NERACA LAJUR (WORKSHEET 10 KOLOM)</h3>
-        <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
+        <h3>ACCOUNTING WORKSHEET</h3>
+        <p>Period: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Start' ?> to <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'End' ?></p>
     </div>
     <div class="divider"></div>
 
@@ -32,24 +32,24 @@
         <thead>
             <tr>
                 <th rowspan="2" width="6%" align="center">Ref</th>
-                <th rowspan="2" width="20%" align="center">Nama Akun</th>
-                <th colspan="2" width="14%" align="center">Neraca Saldo</th>
-                <th colspan="2" width="14%" align="center">Penyesuaian</th>
-                <th colspan="2" width="15%" align="center">NS Disesuaikan</th>
-                <th colspan="2" width="15%" align="center">Laba / Rugi</th>
-                <th colspan="2" width="16%" align="center">Neraca</th>
+                <th rowspan="2" width="20%" align="center">Account Name</th>
+                <th colspan="2" width="14%" align="center">Trial Balance</th>
+                <th colspan="2" width="14%" align="center">Adjustments</th>
+                <th colspan="2" width="15%" align="center">Adjusted TB</th>
+                <th colspan="2" width="15%" align="center">Income Statement</th>
+                <th colspan="2" width="16%" align="center">Balance Sheet</th>
             </tr>
             <tr>
                 <th width="7%" align="center">D</th>
-                <th width="7%" align="center">K</th>
+                <th width="7%" align="center">C</th>
                 <th width="7%" align="center">D</th>
-                <th width="7%" align="center">K</th>
+                <th width="7%" align="center">C</th>
                 <th width="7.5%" align="center">D</th>
-                <th width="7.5%" align="center">K</th>
+                <th width="7.5%" align="center">C</th>
                 <th width="7.5%" align="center">D</th>
-                <th width="7.5%" align="center">K</th>
+                <th width="7.5%" align="center">C</th>
                 <th width="8%" align="center">D</th>
-                <th width="8%" align="center">K</th>
+                <th width="8%" align="center">C</th>
             </tr>
         </thead>
         <tbody>
@@ -130,7 +130,7 @@
             </tr>
             <?php $laba = $tot_lr_kre - $tot_lr_deb; ?>
             <tr class="laba-row">
-                <td colspan="8" width="69%" class="text-right"><strong>LABA BERSIH:</strong></td>
+                <td colspan="8" width="69%" class="text-right"><strong><?= ($laba >= 0) ? 'NET PROFIT:' : 'NET LOSS:' ?></strong></td>
                 <td width="7.5%" class="text-right"><?= ($laba >= 0) ? number_format($laba, 0, ',', '.') : '-' ?></td>
                 <td width="7.5%" class="text-right"><?= ($laba < 0) ? number_format(abs($laba), 0, ',', '.') : '-' ?></td>
                 <td width="8%" class="text-right"><?= ($laba < 0) ? number_format(abs($laba), 0, ',', '.') : '-' ?></td>

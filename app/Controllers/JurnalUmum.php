@@ -41,7 +41,7 @@ class JurnalUmum extends Controller
         $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
         $pdf->SetCreator('SIA AABW');
         $pdf->SetAuthor('AABW Admin');
-        $pdf->SetTitle('Laporan Jurnal Umum');
+        $pdf->SetTitle('General Journal Report');
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
         $pdf->SetMargins(15, 15, 15);
@@ -50,7 +50,7 @@ class JurnalUmum extends Controller
         $pdf->writeHTML($html, true, false, true, false, '');
 
         $this->response->setContentType('application/pdf');
-        $pdf->Output('Jurnal_Umum.pdf', 'I');
+        $pdf->Output('General_Journal.pdf', 'I');
         exit;
     }
 }

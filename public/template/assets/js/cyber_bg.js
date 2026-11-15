@@ -276,7 +276,7 @@
 
     const quotes = [
       'Koneksi Franxx stabil. Siap mendampingi pembukuan, Operator Bakpauu!',
-      'Neraca lajur 10 kolom telah seimbang & tervalidasi. Code 016 standby!',
+      'Neraca lajur (worksheet) telah seimbang & tervalidasi. Code 016 standby!',
       'Buku besar dan transaksi jurnal sinkron dengan database akuntansi.',
       'Strelizia link operational 100%. Mari tuntaskan laporan keuangan ini!',
       'Akun 1, Akun 2, dan Akun 3 siap diposting ke jurnal penyesuaian.'

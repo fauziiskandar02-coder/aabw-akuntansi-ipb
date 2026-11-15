@@ -41,7 +41,7 @@ class NeracaLajur extends Controller
         $pdf = new TCPDF('L', 'mm', 'A4', true, 'UTF-8', false);
         $pdf->SetCreator('SIA AABW');
         $pdf->SetAuthor('AABW Admin');
-        $pdf->SetTitle('Laporan Neraca Lajur (10 Kolom)');
+        $pdf->SetTitle('Accounting Worksheet');
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
         $pdf->SetMargins(8, 8, 8);
@@ -50,7 +50,7 @@ class NeracaLajur extends Controller
         $pdf->writeHTML($html, true, false, true, false, '');
 
         $this->response->setContentType('application/pdf');
-        $pdf->Output('Neraca_Lajur.pdf', 'I');
+        $pdf->Output('Accounting_Worksheet.pdf', 'I');
         exit;
     }
 }

@@ -70,7 +70,9 @@ class ModelTransaksi extends Model
             $builder->where('tbl_transaksi.tanggal <=', $tgl_akhir);
         }
         
+        $builder->orderBy('tbl_nilai.kode_akun3', 'ASC');
         $builder->orderBy('tbl_transaksi.tanggal', 'ASC');
+        $builder->orderBy('tbl_transaksi.id_transaksi', 'ASC');
         $builder->orderBy('tbl_nilai.id_nilai', 'ASC');
         $query = $builder->get();
         return $query->getResult();

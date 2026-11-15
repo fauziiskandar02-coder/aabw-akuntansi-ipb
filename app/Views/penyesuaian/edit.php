@@ -25,32 +25,32 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Tanggal Penyesuaian</label>
+                                <label>Adjustment Date</label>
                                 <input type="date" class="form-control" name="tanggal" value="<?= esc($penyesuaian->tanggal) ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Nilai yang Disesuaikan (Rp)</label>
+                                <label>Adjusted Value (Rp)</label>
                                 <input type="number" step="any" class="form-control" name="nilai" value="<?= esc($penyesuaian->nilai) ?>" required onkeyup="hitung()" onchange="hitung()">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Waktu (Bulan)</label>
+                                <label>Period (Months)</label>
                                 <input type="number" class="form-control" name="waktu" value="<?= esc($penyesuaian->waktu) ?>" required onkeyup="hitung()" onchange="hitung()">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Jumlah per Penyesuaian</label>
+                                <label>Amount per Period</label>
                                 <input type="number" step="any" class="form-control bg-light font-weight-bold" name="jumlah" value="<?= esc($penyesuaian->jumlah) ?>" readonly>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Deskripsi Penyesuaian</label>
+                        <label>Adjustment Description</label>
                         <input type="text" class="form-control" name="deskripsi" value="<?= esc($penyesuaian->deskripsi) ?>" required>
                     </div>
 
@@ -58,10 +58,10 @@
                         <table class="table table-bordered table-md" id="tableLoop">
                             <thead class="thead-light">
                                 <tr>
-                                    <th class="text-center" style="width: 5%">No</th>
-                                    <th style="width: 35%">Kode Akun</th>
+                                    <th class="text-center" style="width: 5%">#</th>
+                                    <th style="width: 35%">Account Code</th>
                                     <th style="width: 20%">Debit</th>
-                                    <th style="width: 20%">Kredit</th>
+                                    <th style="width: 20%">Credit</th>
                                     <th style="width: 15%">Status</th>
                                     <th class="text-center" style="width: 5%">
                                         <button type="button" class="btn btn-primary btn-sm" id="BarisBaru"><i class="fas fa-plus"></i></button>

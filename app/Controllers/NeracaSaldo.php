@@ -41,7 +41,7 @@ class NeracaSaldo extends BaseController
         $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
         $pdf->SetCreator('SIA AABW');
         $pdf->SetAuthor('AABW Admin');
-        $pdf->SetTitle('Laporan Neraca Saldo');
+        $pdf->SetTitle('Trial Balance Report');
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
         $pdf->SetMargins(15, 15, 15);
@@ -50,7 +50,7 @@ class NeracaSaldo extends BaseController
         $pdf->writeHTML($html, true, false, true, false, '');
 
         $this->response->setContentType('application/pdf');
-        $pdf->Output('Neraca_Saldo.pdf', 'I');
+        $pdf->Output('Trial_Balance.pdf', 'I');
         exit;
     }
 }

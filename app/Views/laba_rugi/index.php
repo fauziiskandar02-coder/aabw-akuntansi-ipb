@@ -69,8 +69,8 @@
                 <div class="table-responsive mt-4">
                     <table class="table table-bordered table-md">
                         <thead>
-                            <tr class="table-primary">
-                                <th colspan="3" class="font-weight-bold h6 mb-0">OPERATING REVENUES</th>
+                            <tr class="report-section-header">
+                                <th colspan="3" class="font-weight-bold h6 mb-0 text-cyan"><i class="fas fa-hand-holding-usd mr-2"></i>OPERATING REVENUES</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -81,19 +81,19 @@
                                     <tr>
                                         <td style="width: 15%" class="text-center"><?= $p['kode'] ?></td>
                                         <td style="width: 55%"><?= $p['nama'] ?></td>
-                                        <td style="width: 30%" class="text-right">Rp <?= number_format($p['nilai'], 0, ',', '.') ?></td>
+                                        <td style="width: 30%" class="text-right font-monospace">Rp <?= number_format($p['nilai'], 0, ',', '.') ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php endif; ?>
-                            <tr class="bg-light font-weight-bold">
+                            <tr class="report-summary-row font-weight-bold">
                                 <td colspan="2" class="text-right text-white" style="letter-spacing: 0.5px;">TOTAL REVENUES:</td>
-                                <td class="text-right font-weight-bold text-success h6 mb-0" style="color: #34d399 !important; font-family: var(--font-mono);">Rp <?= number_format($totPendapatan, 0, ',', '.') ?></td>
+                                <td class="text-right font-weight-bold h6 mb-0 font-monospace" style="color: #34d399 !important;">Rp <?= number_format($totPendapatan, 0, ',', '.') ?></td>
                             </tr>
                         </tbody>
 
                         <thead>
-                            <tr class="table-danger">
-                                <th colspan="3" class="font-weight-bold h6 mb-0">OPERATING EXPENSES</th>
+                            <tr class="report-section-header">
+                                <th colspan="3" class="font-weight-bold h6 mb-0 text-cyan"><i class="fas fa-file-invoice-dollar mr-2"></i>OPERATING EXPENSES</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -104,22 +104,22 @@
                                     <tr>
                                         <td class="text-center"><?= $b['kode'] ?></td>
                                         <td><?= $b['nama'] ?></td>
-                                        <td class="text-right">Rp <?= number_format($b['nilai'], 0, ',', '.') ?></td>
+                                        <td class="text-right font-monospace">Rp <?= number_format($b['nilai'], 0, ',', '.') ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php endif; ?>
-                            <tr class="bg-light font-weight-bold">
+                            <tr class="report-summary-row font-weight-bold">
                                 <td colspan="2" class="text-right text-white" style="letter-spacing: 0.5px;">TOTAL EXPENSES:</td>
-                                <td class="text-right font-weight-bold text-danger h6 mb-0" style="color: #f87171 !important; font-family: var(--font-mono);">Rp <?= number_format($totBeban, 0, ',', '.') ?></td>
+                                <td class="text-right font-weight-bold h6 mb-0 font-monospace" style="color: #f87171 !important;">Rp <?= number_format($totBeban, 0, ',', '.') ?></td>
                             </tr>
                         </tbody>
 
                         <tfoot>
-                            <tr class="<?= $labaBersih >= 0 ? 'table-success' : 'table-danger' ?> font-weight-bold" style="border-top: 2px solid <?= $labaBersih >= 0 ? '#10b981' : '#ef4444' ?> !important;">
-                                <td colspan="2" class="text-right h5 mb-0 font-weight-bold text-white" style="letter-spacing: 0.8px;">
+                            <tr class="report-total-row font-weight-bold">
+                                <td colspan="2" class="text-right h6 mb-0 font-weight-bold text-white" style="letter-spacing: 0.8px;">
                                     <?= $labaBersih >= 0 ? '<i class="fas fa-check-circle text-success mr-2"></i>NET PROFIT (INCOME):' : '<i class="fas fa-exclamation-circle text-danger mr-2"></i>NET LOSS:' ?>
                                 </td>
-                                <td class="text-right h5 mb-0 font-weight-bold font-monospace" style="color: <?= $labaBersih >= 0 ? '#34d399' : '#f87171' ?> !important; text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);">
+                                <td class="text-right h6 mb-0 font-weight-bold font-monospace" style="color: <?= $labaBersih >= 0 ? '#34d399' : '#f87171' ?> !important; text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);">
                                     Rp <?= number_format(abs($labaBersih), 0, ',', '.') ?>
                                 </td>
                             </tr>

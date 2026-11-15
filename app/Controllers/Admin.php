@@ -43,4 +43,22 @@ class Admin extends Controller
         $data['user'] = $user;
         return view('admin/detail', $data);
     }
+
+    public function delete($id = null)
+    {
+        if (!$id) {
+            return redirect()->to('admin')->with('error', 'Invalid user ID.');
+        }
+
+        $currentUserId = function_exists('user_id') ? user_id() : (function_exists('user') ? user()->id : null);
+        if ($currentUserId && (int)$id === (int)$currentUserId) {
+            return redirect()->to('admin')->with('error', 'Security restriction: You cannot delete your own active administrator account.');
+        }
+
+        // Remove role mapping and delete user record
+        $this->db->table('auth_groups_users')->where('user_id', $id)->delete();
+        $this->db->table('users')->where('id', $id)->delete();
+
+        return redirect()->to('admin')->with('success', 'User successfully deleted.');
+    }
 }

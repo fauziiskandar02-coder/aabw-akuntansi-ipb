@@ -17,24 +17,24 @@
                     <div class="col-lg-12">
                         <div class="invoice-title">
                             <h2>Detail Transaksi</h2>
-                            <div class="invoice-number">Kwitansi #<?= $transaksi->kwitansi ?></div>
+                            <div class="invoice-number">Receipt #<?= $transaksi->kwitansi ?></div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-6">
                                 <address>
-                                    <strong>Tanggal Transaksi:</strong><br>
+                                    <strong>Transaction Date:</strong><br>
                                     <?= date('d F Y', strtotime($transaksi->tanggal)) ?><br><br>
-                                    <strong>Keterangan Jurnal:</strong><br>
+                                    <strong>Journal Memo:</strong><br>
                                     <?= $transaksi->ketjurnal ?>
                                 </address>
                             </div>
                             <div class="col-md-6 text-md-right">
                                 <address>
-                                    <strong>Deskripsi:</strong><br>
+                                    <strong>Description:</strong><br>
                                     <?= $transaksi->deskripsi ?><br><br>
-                                    <strong>Status Transaksi:</strong><br>
-                                    <span class="badge badge-success">Selesai</span>
+                                    <strong>Transaction Status:</strong><br>
+                                    <span class="badge badge-success">Completed</span>
                                 </address>
                             </div>
                         </div>
@@ -43,16 +43,16 @@
 
                 <div class="row mt-4">
                     <div class="col-md-12">
-                        <div class="section-title">Rincian Jurnal</div>
+                        <div class="section-title">Journal Entry Details</div>
                         <div class="table-responsive">
                             <table class="table table-striped table-hover table-md">
                                 <thead>
                                     <tr>
                                         <th style="width: 5%">#</th>
-                                        <th style="width: 15%">Kode Akun</th>
-                                        <th style="width: 35%">Nama Akun</th>
+                                        <th style="width: 15%">Account Code</th>
+                                        <th style="width: 35%">Account Name</th>
                                         <th class="text-right" style="width: 15%">Debit</th>
-                                        <th class="text-right" style="width: 15%">Kredit</th>
+                                        <th class="text-right" style="width: 15%">Credit</th>
                                         <th class="text-center" style="width: 15%">Status</th>
                                     </tr>
                                 </thead>

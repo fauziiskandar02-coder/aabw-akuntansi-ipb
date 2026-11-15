@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Laporan Laba Rugi</title>
+    <title>Income Statement</title>
     <style>
         body { font-family: helvetica, Arial, sans-serif; font-size: 8.5pt; color: #1e293b; }
         .header { text-align: center; margin-bottom: 12px; }
@@ -23,8 +23,8 @@
 <body>
     <div class="header">
         <h2>PERUSAHAAN AKN-IPB</h2>
-        <h3>LAPORAN LABA / RUGI</h3>
-        <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
+        <h3>INCOME STATEMENT</h3>
+        <p>Period: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Start' ?> to <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'End' ?></p>
     </div>
     <div class="divider"></div>
 
@@ -54,10 +54,10 @@
     $isLaba = $labaBersih >= 0;
     ?>
 
-    <table border="1" cellpadding="5" cellspacing="0">
+    <table border="1" cellpadding="5" cellspacing="0" width="100%">
         <thead>
             <tr style="background-color: #e2e8f0;">
-                <th colspan="3"><strong>A. PENDAPATAN</strong></th>
+                <th colspan="3"><strong>A. OPERATING REVENUES</strong></th>
             </tr>
         </thead>
         <tbody>
@@ -69,14 +69,14 @@
                 </tr>
             <?php endforeach; ?>
             <tr class="total-row">
-                <td colspan="2" width="70%" class="text-right"><strong>TOTAL PENDAPATAN:</strong></td>
+                <td colspan="2" width="70%" class="text-right"><strong>TOTAL REVENUES:</strong></td>
                 <td width="30%" class="text-right"><strong>Rp <?= number_format($totPendapatan, 0, ',', '.') ?></strong></td>
             </tr>
         </tbody>
 
         <thead>
             <tr style="background-color: #e2e8f0;">
-                <th colspan="3"><strong>B. BEBAN - BEBAN OPERASIONAL</strong></th>
+                <th colspan="3"><strong>B. OPERATING EXPENSES</strong></th>
             </tr>
         </thead>
         <tbody>
@@ -88,14 +88,14 @@
                 </tr>
             <?php endforeach; ?>
             <tr class="total-row">
-                <td colspan="2" width="70%" class="text-right"><strong>TOTAL BEBAN:</strong></td>
+                <td colspan="2" width="70%" class="text-right"><strong>TOTAL EXPENSES:</strong></td>
                 <td width="30%" class="text-right"><strong>Rp <?= number_format($totBeban, 0, ',', '.') ?></strong></td>
             </tr>
         </tbody>
 
         <tfoot>
             <tr class="<?= $isLaba ? 'laba-row' : 'rugi-row' ?>">
-                <td colspan="2" width="70%" class="text-right"><strong><?= $isLaba ? 'LABA BERSIH USAHA (NET INCOME)' : 'RUGI BERSIH USAHA (NET LOSS)' ?>:</strong></td>
+                <td colspan="2" width="70%" class="text-right"><strong><?= $isLaba ? 'NET PROFIT (INCOME):' : 'NET LOSS:' ?></strong></td>
                 <td width="30%" class="text-right"><strong>Rp <?= number_format(abs($labaBersih), 0, ',', '.') ?></strong></td>
             </tr>
         </tfoot>

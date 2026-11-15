@@ -13,14 +13,14 @@
     <div class="section-body">
         <div class="card">
             <div class="card-header">
-                <h4>Edit Data Akun 3</h4>
+                <h4>Edit Account 3 Data</h4>
             </div>
             <div class="card-body p-5">
                 <form action="<?= site_url('akun3/' . $dtakun3->id_akun3) ?>" method="post">
                     <?= csrf_field() ?>
                     <input type="hidden" name="_method" value="PUT">
                     <div class="form-group">
-                        <label>Kode Akun 1</label>
+                        <label>Account Code 1</label>
                         <select class="form-control" name="kode_akun1" required>
                             <?php foreach ($dtakun1 as $key => $value) : ?>
                                 <option value="<?= $value->kode_akun1 ?>" <?= $dtakun3->kode_akun1 == $value->kode_akun1 ? 'selected' : '' ?>>
@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Kode Akun 2</label>
+                        <label>Account Code 2</label>
                         <select class="form-control" name="kode_akun2" required>
                             <?php foreach ($dtakun2 as $key => $value) : ?>
                                 <option value="<?= $value->kode_akun2 ?>" <?= $dtakun3->kode_akun2 == $value->kode_akun2 ? 'selected' : '' ?>>
@@ -42,12 +42,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Kode Akun 3</label>
-                        <input type="text" class="form-control" name="kode_akun3" value="<?= $dtakun3->kode_akun3 ?>" placeholder="Kode Akun 3" required>
+                        <label>Account Code 3</label>
+                        <input type="text" class="form-control" name="kode_akun3" value="<?= $dtakun3->kode_akun3 ?>" placeholder="Account Code 3" required>
                     </div>
                     <div class="form-group">
-                        <label>Nama Akun 3</label>
-                        <input type="text" class="form-control" name="nama_akun3" value="<?= $dtakun3->nama_akun3 ?>" placeholder="Nama Akun 3" required>
+                        <label>Account Name 3</label>
+                        <input type="text" class="form-control" name="nama_akun3" value="<?= $dtakun3->nama_akun3 ?>" placeholder="Account Name 3" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Update</button>

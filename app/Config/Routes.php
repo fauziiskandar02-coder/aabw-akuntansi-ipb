@@ -79,6 +79,8 @@ $routes->get('logout', 'Auth::logout');
 // Manajemen User (Video 18)
 $routes->get('admin', 'Admin::index');
 $routes->get('admin/(:num)', 'Admin::detail/$1');
+$routes->delete('admin/(:num)', 'Admin::delete/$1');
+$routes->post('admin/(:num)/delete', 'Admin::delete/$1');
 
 // System Info & Academic Credits (SIA AKN SV-IPB)
 $routes->get('about', 'Home::about');

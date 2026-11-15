@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Neraca Saldo</title>
+    <title>Trial Balance</title>
     <style>
         body { font-family: helvetica, Arial, sans-serif; font-size: 8.5pt; color: #1e293b; }
         .header { text-align: center; margin-bottom: 12px; }
@@ -21,18 +21,18 @@
 <body>
     <div class="header">
         <h2>PERUSAHAAN AKN-IPB</h2>
-        <h3>NERACA SALDO (TRIAL BALANCE)</h3>
-        <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
+        <h3>TRIAL BALANCE</h3>
+        <p>Period: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Start' ?> to <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'End' ?></p>
     </div>
     <div class="divider"></div>
 
-    <table border="1" cellpadding="4" cellspacing="0">
+    <table border="1" cellpadding="4" cellspacing="0" width="100%">
         <thead>
             <tr style="background-color: #e2e8f0;">
-                <th width="15%">Kode Akun</th>
-                <th width="45%">Nama Akun</th>
+                <th width="15%">Account Code</th>
+                <th width="45%">Account Name</th>
                 <th width="20%">Debit (Rp)</th>
-                <th width="20%">Kredit (Rp)</th>
+                <th width="20%">Credit (Rp)</th>
             </tr>
         </thead>
         <tbody>

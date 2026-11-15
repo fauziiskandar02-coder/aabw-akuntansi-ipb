@@ -43,7 +43,7 @@
                         <p class="text-sub mb-3" style="line-height: 1.7; max-width: 720px; font-size: 14.5px;">
                             Sistem Informasi Akuntansi berbasis web terintegrasi yang dirancang dan dikembangkan untuk
                             mengotomatisasi siklus akuntansi komprehensif: mulai dari jurnal transaksi, buku besar,
-                            neraca saldo, jurnal penyesuaian, neraca lajur 10 kolom, hingga pelaporan keuangan otomatis
+                            neraca saldo, jurnal penyesuaian, neraca lajur (worksheet), hingga pelaporan keuangan otomatis
                             (Laba Rugi, Perubahan Modal, Neraca, dan Arus Kas).
                         </p>
 
@@ -52,7 +52,7 @@
                                 <i class="fas fa-book mr-1"></i> General Journal (19 Trx)
                             </a>
                             <a href="<?= site_url('neracalajur') ?>" class="btn btn-info mr-2 mb-2">
-                                <i class="fab fa-gitter mr-1"></i> Worksheet (10-Col)
+                                <i class="fab fa-gitter mr-1"></i> Worksheet
                             </a>
                             <a href="<?= site_url('laporan/neraca') ?>" class="btn btn-warning mr-2 mb-2">
                                 <i class="fas fa-balance-scale mr-1"></i> Balance Sheet
@@ -255,7 +255,7 @@
                         <ul class="list-unstyled mb-0">
                             <li class="mb-2"><i class="fas fa-angle-right text-cyan mr-2"></i><strong>Chart of Accounts:</strong> 3-Level COA Code Structure</li>
                             <li class="mb-2"><i class="fas fa-angle-right text-cyan mr-2"></i><strong>General Journal:</strong> 19 Balanced Double-Entry Items</li>
-                            <li class="mb-2"><i class="fas fa-angle-right text-cyan mr-2"></i><strong>Worksheet:</strong> 10-Column Auto Balancing Matrix</li>
+                            <li class="mb-2"><i class="fas fa-angle-right text-cyan mr-2"></i><strong>Worksheet:</strong> Auto-Balancing Matrix (Worksheet)</li>
                             <li class="mb-2"><i class="fas fa-angle-right text-cyan mr-2"></i><strong>Financial Statements:</strong> Laba Rugi, Modal, Neraca, Kas</li>
                             <li class="mb-0"><i class="fas fa-angle-right text-cyan mr-2"></i><strong>Reporting:</strong> Instant Date Range Filtering & Clean Print</li>
                         </ul>

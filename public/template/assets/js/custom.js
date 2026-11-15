@@ -93,7 +93,7 @@ function Barisbaru() {
     Baris += '<td class="text-center">' + Nomor + '</td>';
     Baris += '<td>';
     Baris += '<select class="form-control select2-akun" name="kode_akun3[]" required>';
-    Baris += '<option value="">-- Pilih Akun --</option>';
+    Baris += '<option value="">-- Select Account --</option>';
     Baris += '</select>';
     Baris += '</td>';
     Baris += '<td><input type="number" step="any" class="form-control debit" name="debit[]" value="0" required></td>';

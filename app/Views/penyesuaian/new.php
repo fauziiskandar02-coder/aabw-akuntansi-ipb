@@ -3,17 +3,17 @@
 <?php /** @var array $dtstatus */ ?>
 
 <?= $this->section('content') ?>
-<title>SIA-IPB &mdash; Tambah Penyesuaian</title>
+<title>SIA-IPB &mdash; New Adjusting Entry</title>
 
 <section class="section">
     <div class="section-header">
-        <a href="<?= site_url('penyesuaian') ?>" class="btn btn-primary"> Back</a>
+        <a href="<?= site_url('penyesuaian') ?>" class="btn btn-primary"><i class="fas fa-arrow-left mr-1"></i> Back</a>
     </div>
 
     <div class="section-body">
         <div class="card">
             <div class="card-header">
-                <h4>Input Data Transaksi Penyesuaian</h4>
+                <h4>Input Adjusting Entry Data</h4>
             </div>
             <div class="card-body p-4">
                 <form action="<?= site_url('penyesuaian') ?>" method="post">
@@ -22,43 +22,43 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Tanggal Penyesuaian</label>
+                                <label>Adjustment Date</label>
                                 <input type="date" class="form-control" name="tanggal" value="<?= date('Y-m-d') ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Nilai yang Disesuaikan (Rp)</label>
+                                <label>Adjusted Value (Rp)</label>
                                 <input type="number" step="any" class="form-control" name="nilai" placeholder="0" required onkeyup="hitung()" onchange="hitung()">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Waktu (Bulan)</label>
+                                <label>Period (Months)</label>
                                 <input type="number" class="form-control" name="waktu" placeholder="1" required onkeyup="hitung()" onchange="hitung()">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Jumlah per Penyesuaian</label>
+                                <label>Amount per Period</label>
                                 <input type="number" step="any" class="form-control bg-light font-weight-bold" name="jumlah" placeholder="0" readonly>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Deskripsi Penyesuaian</label>
-                        <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi penyesuaian..." required>
+                        <label>Adjustment Description</label>
+                        <input type="text" class="form-control" name="deskripsi" placeholder="Adjustment memo / description..." required>
                     </div>
 
                     <div class="table-responsive mt-3">
                         <table class="table table-bordered table-md" id="tableLoop">
                             <thead class="thead-light">
                                 <tr>
-                                    <th class="text-center" style="width: 5%">No</th>
-                                    <th style="width: 35%">Kode Akun</th>
+                                    <th class="text-center" style="width: 5%">#</th>
+                                    <th style="width: 35%">Account Code</th>
                                     <th style="width: 20%">Debit</th>
-                                    <th style="width: 20%">Kredit</th>
+                                    <th style="width: 20%">Credit</th>
                                     <th style="width: 15%">Status</th>
                                     <th class="text-center" style="width: 5%">
                                         <button type="button" class="btn btn-primary btn-sm" id="BarisBaru"><i class="fas fa-plus"></i></button>
@@ -66,12 +66,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Baris 1: Debit -->
+                                <!-- Row 1: Debit -->
                                 <tr>
                                     <td class="text-center">1</td>
                                     <td>
                                         <select class="form-control select2-akun" name="kode_akun3[]" required>
-                                            <option value="">-- Pilih Akun --</option>
+                                            <option value="">-- Select Account --</option>
                                             <?php foreach ($dtakun3 as $akun) : ?>
                                                 <option value="<?= $akun->kode_akun3 ?>"><?= $akun->kode_akun3 ?> - <?= $akun->nama_akun3 ?></option>
                                             <?php endforeach; ?>

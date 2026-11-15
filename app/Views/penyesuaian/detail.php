@@ -23,18 +23,18 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <address>
-                                    <strong>Tanggal Penyesuaian:</strong><br>
+                                    <strong>Adjustment Date:</strong><br>
                                     <?= date('d F Y', strtotime($penyesuaian->tanggal)) ?><br><br>
-                                    <strong>Deskripsi Transaksi:</strong><br>
+                                    <strong>Description / Memo:</strong><br>
                                     <?= $penyesuaian->deskripsi ?>
                                 </address>
                             </div>
                             <div class="col-md-6 text-md-right">
                                 <address>
-                                    <strong>Nilai Transaksi Asli:</strong><br>
+                                    <strong>Original Adjusted Value:</strong><br>
                                     Rp <?= number_format($penyesuaian->nilai, 0, ',', '.') ?><br><br>
-                                    <strong>Waktu Penyesuaian:</strong><br>
-                                    <?= $penyesuaian->waktu ?> Bulan (Rp <?= number_format($penyesuaian->jumlah, 0, ',', '.') ?> / bulan)
+                                    <strong>Adjustment Period:</strong><br>
+                                    <?= $penyesuaian->waktu ?> Months (Rp <?= number_format($penyesuaian->jumlah, 0, ',', '.') ?> / month)
                                 </address>
                             </div>
                         </div>
@@ -43,16 +43,16 @@
 
                 <div class="row mt-4">
                     <div class="col-md-12">
-                        <div class="section-title">Pos Akun Penyesuaian (AJP)</div>
+                        <div class="section-title">Adjusting Journal Entries (AJP)</div>
                         <div class="table-responsive">
                             <table class="table table-striped table-hover table-md">
                                 <thead>
                                     <tr>
                                         <th style="width: 5%">#</th>
-                                        <th style="width: 15%">Kode Akun</th>
-                                        <th style="width: 35%">Nama Akun</th>
+                                        <th style="width: 15%">Account Code</th>
+                                        <th style="width: 35%">Account Name</th>
                                         <th class="text-right" style="width: 15%">Debit</th>
-                                        <th class="text-right" style="width: 15%">Kredit</th>
+                                        <th class="text-right" style="width: 15%">Credit</th>
                                         <th class="text-center" style="width: 15%">Status</th>
                                     </tr>
                                 </thead>

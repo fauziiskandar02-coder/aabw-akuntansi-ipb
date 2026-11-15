@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Buku Besar (Posting)</title>
+    <title>General Ledger (Posting)</title>
     <style>
         body { font-family: helvetica, Arial, sans-serif; font-size: 8.5pt; color: #111827; }
         .header { text-align: center; margin-bottom: 10px; }
@@ -22,8 +22,8 @@
 <body>
     <div class="header">
         <h2>PERUSAHAAN AKN-IPB</h2>
-        <h3>BUKU BESAR (POSTING)</h3>
-        <p>Periode: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Awal' ?> s/d <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'Akhir' ?></p>
+        <h3>GENERAL LEDGER (POSTING)</h3>
+        <p>Period: <?= !empty($tgl_awal) ? date('d F Y', strtotime($tgl_awal)) : 'Start' ?> to <?= !empty($tgl_akhir) ? date('d F Y', strtotime($tgl_akhir)) : 'End' ?></p>
     </div>
     <div class="divider"></div>
 
@@ -33,6 +33,22 @@
         $groupedPosting[$row->kode_akun3]['nama'] = $row->nama_akun3;
         $groupedPosting[$row->kode_akun3]['rows'][] = $row;
     }
+    // Strict numerical sorting by account code
+    ksort($groupedPosting, SORT_NUMERIC);
+
+    // Ensure chronological transaction order within each account
+    foreach ($groupedPosting as $kodeAkun => &$accData) {
+        usort($accData['rows'], function ($a, $b) {
+            if ($a->tanggal === $b->tanggal) {
+                if ($a->id_transaksi === $b->id_transaksi) {
+                    return $a->id_nilai <=> $b->id_nilai;
+                }
+                return $a->id_transaksi <=> $b->id_transaksi;
+            }
+            return strcmp($a->tanggal, $b->tanggal);
+        });
+    }
+    unset($accData);
     ?>
 
     <?php foreach ($groupedPosting as $kodeAkun => $accData) : 
@@ -45,21 +61,21 @@
         $totKredit = 0;
     ?>
         <div class="account-title">
-            Akun: <?= $kodeAkun ?> &mdash; <?= $accData['nama'] ?> (Saldo Normal: <?= $isDebitNormal ? 'Debit' : 'Kredit' ?>)
+            Account: <?= $kodeAkun ?> &mdash; <?= $accData['nama'] ?> (Normal Balance: <?= $isDebitNormal ? 'Debit (+)' : 'Credit (+)' ?>)
         </div>
-        <table border="1" cellpadding="4" cellspacing="0">
+        <table border="1" cellpadding="4" cellspacing="0" width="100%">
             <thead>
                 <tr style="background-color: #e2e8f0;">
-                    <th rowspan="2" width="10%">Tanggal</th>
-                    <th rowspan="2" width="34%">Keterangan</th>
+                    <th rowspan="2" width="10%">Date</th>
+                    <th rowspan="2" width="34%">Description</th>
                     <th rowspan="2" width="8%">Ref</th>
                     <th rowspan="2" width="13%">Debit (Rp)</th>
-                    <th rowspan="2" width="13%">Kredit (Rp)</th>
-                    <th colspan="2" width="22%">Saldo (Rp)</th>
+                    <th rowspan="2" width="13%">Credit (Rp)</th>
+                    <th colspan="2" width="22%">Balance (Rp)</th>
                 </tr>
                 <tr style="background-color: #e2e8f0;">
                     <th width="11%">Debit</th>
-                    <th width="11%">Kredit</th>
+                    <th width="11%">Credit</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,10 +105,10 @@
             </tbody>
             <tfoot>
                 <tr class="total-row">
-                    <td colspan="3" width="52%" class="text-right"><strong>TOTAL MUTASI:</strong></td>
+                    <td colspan="3" width="52%" class="text-right"><strong>TOTAL MUTATION:</strong></td>
                     <td width="13%" class="text-right"><strong><?= number_format($totDebit, 0, ',', '.') ?></strong></td>
                     <td width="13%" class="text-right"><strong><?= number_format($totKredit, 0, ',', '.') ?></strong></td>
-                    <td colspan="2" width="22%" class="text-center"><strong>Saldo Akhir: Rp <?= number_format(abs($saldo), 0, ',', '.') ?> (<?= $isDebitNormal ? ($saldo >= 0 ? 'D' : 'K') : ($saldo >= 0 ? 'K' : 'D') ?>)</strong></td>
+                    <td colspan="2" width="22%" class="text-center"><strong>Ending Balance: Rp <?= number_format(abs($saldo), 0, ',', '.') ?> (<?= $isDebitNormal ? ($saldo >= 0 ? 'Debit' : 'Credit') : ($saldo >= 0 ? 'Credit' : 'Debit') ?>)</strong></td>
                 </tr>
             </tfoot>
         </table>

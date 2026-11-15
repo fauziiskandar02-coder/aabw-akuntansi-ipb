@@ -9,7 +9,9 @@
     <?= $this->renderSection('title') ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="<?= base_url('template/assets/img/aabw_avatar.jpg') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.7') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.7') ?>">
+    <link rel="apple-touch-icon" href="<?= base_url('favicon.png?v=2.3.7') ?>">
 
     <!-- General CSS Files (CDN for deployment compatibility) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
@@ -27,7 +29,7 @@
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/components.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/custom.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.6') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.7') ?>">
 </head>
 
 <body>
@@ -334,7 +336,7 @@
 
     <!-- Template JS File -->
     <script src="<?= base_url('template/assets/js/scripts.js') ?>"></script>
-    <script src="<?= base_url('template/assets/js/custom.js?v=2.3.6') ?>"></script>
+    <script src="<?= base_url('template/assets/js/custom.js?v=2.3.7') ?>"></script>
 
     <!-- Page Specific JS File -->
 </body>

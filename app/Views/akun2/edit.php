@@ -15,7 +15,7 @@
         <!-- dinamis -->
         <div class="card">
             <div class="card-header">
-                <h4>Edit Data Akun 2</h4>
+                <h4>Edit Account 2 Data</h4>
             </div>
             <div class="card-body p-5">
                 <form action="<?= site_url('akun2/' . $dtakun2->id_akun2) ?>" method="post">
@@ -23,7 +23,7 @@
                     <input type="hidden" name="_method" value="PUT">
 
                     <div class="form-group">
-                        <label>Kode Akun 1</label>
+                        <label>Account Code 1</label>
                         <select class="form-control" name="kode_akun1">
                             <?php foreach ($dtakun1 as $key => $value) : ?>
                                 <option value="<?= $value->kode_akun1 ?>" <?= $dtakun2->kode_akun1 == $value->kode_akun1 ? 'selected' : null ?>><?= $value->nama_akun1 ?></option>
@@ -32,16 +32,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Kode Akun 2</label>
-                        <input type="text" class="form-control" name="kode_akun2" placeholder="Kode Akun 2" required value="<?= $dtakun2->kode_akun2 ?>">
+                        <label>Account Code 2</label>
+                        <input type="text" class="form-control" name="kode_akun2" placeholder="Account Code 2" required value="<?= $dtakun2->kode_akun2 ?>">
                     </div>
                     <div class="form-group">
-                        <label>Nama Akun 2</label>
-                        <input type="text" class="form-control" name="nama_akun2" placeholder="Nama Akun 2" required value="<?= $dtakun2->nama_akun2 ?>">
+                        <label>Account Name 2</label>
+                        <input type="text" class="form-control" name="nama_akun2" placeholder="Account Name 2" required value="<?= $dtakun2->nama_akun2 ?>">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Update</button>
-                        <button type="reset" class="btn btn-secondary"> Delete</button>
+                        <button type="reset" class="btn btn-secondary"><i class="fas fa-undo"></i> Reset</button>
                     </div>
                 </form>
             </div>

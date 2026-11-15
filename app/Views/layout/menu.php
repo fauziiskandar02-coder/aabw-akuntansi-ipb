@@ -22,7 +22,7 @@ $isLap = ($seg1 == 'labarugi' || ($seg1 == 'laporan' && in_array($seg2, ['peruba
 <li class="<?= $seg1 == 'jurnalumum' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url('jurnalumum') ?>"><i class="fas fa-book"></i> <span>General Journal</span></a></li>
 <li class="<?= $seg1 == 'posting' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url('posting') ?>"><i class="fas fa-exchange-alt"></i> <span>Ledger Posting</span></a></li>
 <li class="<?= $seg1 == 'neracasaldo' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url('neracasaldo') ?>"><i class="fas fa-clipboard-check"></i> <span>Trial Balance</span></a></li>
-<li class="<?= $seg1 == 'neracalajur' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url('neracalajur') ?>"><i class="fas fa-table"></i> <span>Worksheet (10-Col)</span></a></li>
+<li class="<?= $seg1 == 'neracalajur' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url('neracalajur') ?>"><i class="fas fa-table"></i> <span>Worksheet</span></a></li>
 
 <li class="nav-item dropdown <?= $isTrans ? 'active' : '' ?>">
     <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-invoice"></i> <span>Transactions</span></a>

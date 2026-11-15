@@ -650,17 +650,16 @@ div.bg-white {
   color: var(--text-main) !important;
 }
 
-/* Contextual Rows (Blueprint / Cyberpunk Themed) */
+/* Contextual Rows (Refined Minimalist Cyberpunk - Anti-AI-Slop) */
 .table-primary,
 .table-primary > th,
 .table-primary > td,
 tr.table-primary,
 tr.table-primary > td,
 tr.table-primary > th {
-  background-color: rgba(29, 78, 216, 0.4) !important;
-  background: rgba(29, 78, 216, 0.4) !important;
-  color: #bfdbfe !important;
-  border-color: rgba(59, 130, 246, 0.45) !important;
+  background: rgba(14, 25, 48, 0.6) !important;
+  color: var(--cyan-bright) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
 }
 
 .table-success,
@@ -669,10 +668,9 @@ tr.table-primary > th {
 tr.table-success,
 tr.table-success > td,
 tr.table-success > th {
-  background-color: rgba(16, 185, 129, 0.28) !important;
-  background: rgba(16, 185, 129, 0.28) !important;
-  color: #6ee7b7 !important;
-  border-color: rgba(16, 185, 129, 0.45) !important;
+  background: rgba(14, 25, 48, 0.45) !important;
+  color: #34d399 !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
 }
 
 .table-danger,
@@ -681,10 +679,9 @@ tr.table-success > th {
 tr.table-danger,
 tr.table-danger > td,
 tr.table-danger > th {
-  background-color: rgba(239, 68, 68, 0.28) !important;
-  background: rgba(239, 68, 68, 0.28) !important;
-  color: #fca5a5 !important;
-  border-color: rgba(239, 68, 68, 0.45) !important;
+  background: rgba(14, 25, 48, 0.45) !important;
+  color: #f87171 !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
 }
 
 .table-warning,
@@ -693,10 +690,9 @@ tr.table-danger > th {
 tr.table-warning,
 tr.table-warning > td,
 tr.table-warning > th {
-  background-color: rgba(245, 158, 11, 0.28) !important;
-  background: rgba(245, 158, 11, 0.28) !important;
-  color: #fde68a !important;
-  border-color: rgba(245, 158, 11, 0.45) !important;
+  background: rgba(14, 25, 48, 0.45) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
 }
 
 .table-info,
@@ -705,10 +701,39 @@ tr.table-warning > th {
 tr.table-info,
 tr.table-info > td,
 tr.table-info > th {
-  background-color: rgba(6, 182, 212, 0.28) !important;
-  background: rgba(6, 182, 212, 0.28) !important;
-  color: #a5f3fc !important;
-  border-color: rgba(6, 182, 212, 0.45) !important;
+  background: rgba(14, 25, 48, 0.45) !important;
+  color: var(--cyan-bright) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+
+/* Dedicated Cohesive Financial Statement Table Styles */
+.report-section-header,
+tr.report-section-header > th,
+tr.report-section-header > td {
+  background: rgba(14, 25, 48, 0.8) !important;
+  color: var(--cyan-bright) !important;
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  border-left: 3px solid var(--cyan-bright) !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+.report-summary-row,
+tr.report-summary-row > td {
+  background: rgba(10, 18, 36, 0.6) !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25) !important;
+  font-weight: 600 !important;
+}
+
+.report-total-row,
+tr.report-total-row > td {
+  background: rgba(8, 14, 28, 0.85) !important;
+  border-top: 2px solid rgba(56, 189, 248, 0.4) !important;
+  border-bottom: 3px double rgba(56, 189, 248, 0.5) !important;
+  font-weight: 700 !important;
 }
 
 .table-light,

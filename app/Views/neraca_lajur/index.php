@@ -4,11 +4,11 @@
 <?php /** @var string $tgl_akhir */ ?>
 
 <?= $this->section('content') ?>
-<title>SIA-IPB &mdash; 10-Column Worksheet</title>
+<title>SIA-IPB &mdash; Accounting Worksheet</title>
 
 <section class="section">
     <div class="section-header">
-        <h1>10-Column Accounting Worksheet</h1>
+        <h1>Accounting Worksheet</h1>
     </div>
 
     <div class="section-body">
@@ -149,7 +149,7 @@
                             <?php
                             $laba = $tot_lr_kre - $tot_lr_deb;
                             ?>
-                            <tr class="table-warning font-weight-bold">
+                            <tr class="report-summary-row font-weight-bold">
                                 <td colspan="8" class="text-right"><strong>NET INCOME / (LOSS):</strong></td>
                                 <td class="text-right"><?= ($laba >= 0) ? number_format($laba, 0, ',', '.') : '-' ?></td>
                                 <td class="text-right"><?= ($laba < 0) ? number_format(abs($laba), 0, ',', '.') : '-' ?></td>

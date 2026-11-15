@@ -32,7 +32,7 @@
 
                         <p class="text-sub mb-4" style="line-height: 1.6; max-width: 620px;">
                             Integrated web-based accounting information system featuring general ledger, journal entries, 
-                            adjusting entries, 10-column worksheet, and automated balanced financial statements.
+                            adjusting entries, accounting worksheet, and automated balanced financial statements.
                         </p>
 
                         <div class="d-flex flex-wrap gap-2">
@@ -40,7 +40,7 @@
                                 <i class="fas fa-columns mr-1"></i> Open Transactions
                             </a>
                             <a href="<?= site_url('neracalajur') ?>" class="btn btn-info mr-2 mb-2">
-                                <i class="fab fa-gitter mr-1"></i> Worksheet (10-Col)
+                                <i class="fab fa-gitter mr-1"></i> Accounting Worksheet
                             </a>
                             <a href="<?= site_url('labarugi') ?>" class="btn btn-warning mr-2 mb-2">
                                 <i class="fas fa-chart-line mr-1"></i> Income Statement

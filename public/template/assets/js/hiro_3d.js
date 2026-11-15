@@ -477,7 +477,7 @@
     const speechBubble = document.getElementById('hiro-speech-bubble');
     const dialogues = [
       'Accounting System Online. Ready for transaction data synchronization!',
-      'All journal entries and 10-column worksheet stable, Operator Bakpauu!',
+      'All journal entries and accounting worksheet stable, Operator Bakpauu!',
       'Pilot 016 Hiro fully synchronized with neural link!',
       'Income Statement and Balance Sheet validated and balanced!',
       'Status: Ready to process new journal entries at any moment!'

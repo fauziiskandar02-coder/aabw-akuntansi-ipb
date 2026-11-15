@@ -41,7 +41,7 @@ class LabaRugi extends Controller
         $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
         $pdf->SetCreator('SIA AABW');
         $pdf->SetAuthor('AABW Admin');
-        $pdf->SetTitle('Laporan Laba Rugi');
+        $pdf->SetTitle('Income Statement Report');
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
         $pdf->SetMargins(15, 15, 15);
@@ -50,7 +50,7 @@ class LabaRugi extends Controller
         $pdf->writeHTML($html, true, false, true, false, '');
 
         $this->response->setContentType('application/pdf');
-        $pdf->Output('Laporan_Laba_Rugi.pdf', 'I');
+        $pdf->Output('Income_Statement.pdf', 'I');
         exit;
     }
 }

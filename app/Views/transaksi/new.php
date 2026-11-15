@@ -23,26 +23,26 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>No. Kwitansi</label>
+                                <label>Receipt No.</label>
                                 <input type="text" class="form-control" name="kwitansi" value="<?= esc($kwitansi) ?>" readonly>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Tanggal Transaksi</label>
+                                <label>Transaction Date</label>
                                 <input type="date" class="form-control" name="tanggal" value="<?= date('Y-m-d') ?>" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Keterangan Jurnal</label>
-                                <input type="text" class="form-control" name="ketjurnal" placeholder="Keterangan Jurnal" required>
+                                <label>Journal Description</label>
+                                <input type="text" class="form-control" name="ketjurnal" placeholder="Journal Description" required>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Deskripsi</label>
-                                <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi Transaksi" required>
+                                <label>Memo / Description</label>
+                                <input type="text" class="form-control" name="deskripsi" placeholder="Transaction Memo" required>
                             </div>
                         </div>
                     </div>
@@ -51,10 +51,10 @@
                         <table class="table table-bordered table-md" id="tableLoop">
                             <thead class="thead-light">
                                 <tr>
-                                    <th class="text-center" style="width: 5%">No</th>
-                                    <th style="width: 35%">Kode Akun</th>
+                                    <th class="text-center" style="width: 5%">#</th>
+                                    <th style="width: 35%">Account Code</th>
                                     <th style="width: 20%">Debit</th>
-                                    <th style="width: 20%">Kredit</th>
+                                    <th style="width: 20%">Credit</th>
                                     <th style="width: 15%">Status</th>
                                     <th class="text-center" style="width: 5%">
                                         <button type="button" class="btn btn-primary btn-sm" id="BarisBaru"><i class="fas fa-plus"></i></button>
@@ -62,12 +62,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Baris 1: Default Debit -->
+                                <!-- Row 1: Default Debit -->
                                 <tr>
                                     <td class="text-center">1</td>
                                     <td>
                                         <select class="form-control select2-akun" name="kode_akun3[]" required>
-                                            <option value="">-- Pilih Akun --</option>
+                                            <option value="">-- Select Account --</option>
                                             <?php foreach ($dtakun3 as $akun) : ?>
                                                 <option value="<?= $akun->kode_akun3 ?>"><?= $akun->kode_akun3 ?> - <?= $akun->nama_akun3 ?></option>
                                             <?php endforeach; ?>
