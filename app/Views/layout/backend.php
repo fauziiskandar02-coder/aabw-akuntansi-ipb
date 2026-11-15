@@ -9,10 +9,10 @@
     <?= $this->renderSection('title') ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
-    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.8') ?>">
-    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
-    <link rel="apple-touch-icon" href="<?= base_url('favicon.png?v=2.3.8') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.9') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.9') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.9') ?>">
+    <link rel="apple-touch-icon" href="<?= base_url('favicon.png?v=2.3.9') ?>">
 
     <!-- General CSS Files (CDN for deployment compatibility) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/components.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/custom.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.8') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.9') ?>">
 </head>
 
 <body>
@@ -235,7 +235,7 @@
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/<?= user()->user_img ?? 'avatar-1.png' ?>" class="rounded-circle mr-2" style="border: 2px solid var(--cyan-bright); box-shadow: 0 0 10px var(--cyan-glow);">
                             <div class="d-sm-none d-lg-inline-block font-monospace">
-                                <span class="badge badge-primary px-2 py-1 mr-1" style="font-size: 10px; font-weight: 700; letter-spacing: 0.5px;">
+                                <span class="tech-tag tech-tag-cyan mr-1" style="font-size: 10px; font-weight: 700; letter-spacing: 0.5px; padding: 2px 6px;">
                                     <span class="status-indicator"></span>OPERATOR
                                 </span>
                                 <span class="cyber-glitch font-weight-bold" data-text="Bakpauu" style="color: var(--cyan-bright); font-size: 13.5px;">Bakpauu</span> 

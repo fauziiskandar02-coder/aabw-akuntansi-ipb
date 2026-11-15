@@ -103,8 +103,8 @@
                         <h6 class="mb-0 font-weight-bold text-primary">
                             <i class="fas fa-book mr-2"></i> Account: <?= $kodeAkun ?> &mdash; <?= $accData['nama'] ?>
                         </h6>
-                        <span class="badge badge-info text-uppercase font-weight-bold">
-                            Normal: <?= $isDebitNormal ? 'Debit (+)' : 'Credit (+)' ?>
+                        <span class="tech-tag tech-tag-cyan" style="font-size: 11px;">
+                            [NORMAL: <?= $isDebitNormal ? 'DEBIT (+)' : 'CREDIT (+)' ?>]
                         </span>
                     </div>
                     <div class="card-body p-0">

@@ -759,6 +759,64 @@ tr.table-active > th {
   color: #ffffff !important;
 }
 
+/* ==========================================================================
+   CYBERPUNK HUD TAGS & BADGE OVERHAUL (Eliminate solid bar "AI slop")
+   ========================================================================== */
+.badge, .tech-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.8px !important;
+  padding: 3px 8px !important;
+  border-radius: 2px !important;
+  background: rgba(10, 18, 36, 0.75) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
+  text-transform: uppercase !important;
+  transition: all 0.2s ease !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+.badge-primary, .tech-tag-cyan {
+  color: var(--cyan-bright) !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  background: rgba(0, 240, 255, 0.08) !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.15) !important;
+}
+
+.badge-success, .tech-tag-green {
+  color: #34d399 !important;
+  border: 1px solid rgba(52, 211, 153, 0.45) !important;
+  background: rgba(52, 211, 153, 0.08) !important;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.15) !important;
+}
+
+.badge-info, .tech-tag-info {
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+}
+
+.badge-warning, .tech-tag-warning {
+  color: #fbbf24 !important;
+  border: 1px solid rgba(251, 191, 36, 0.45) !important;
+  background: rgba(251, 191, 36, 0.08) !important;
+}
+
+.badge-danger, .tech-tag-danger {
+  color: #f87171 !important;
+  border: 1px solid rgba(248, 113, 113, 0.45) !important;
+  background: rgba(248, 113, 113, 0.08) !important;
+}
+
+.badge-secondary, .badge-light, .tech-tag-subtle {
+  color: #94a3b8 !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  background: rgba(15, 23, 42, 0.65) !important;
+}
+
 /* Datepicker native indicator color invert */
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.85) sepia(100%) hue-rotate(145deg) saturate(300%);

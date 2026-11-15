@@ -89,9 +89,9 @@
                             <tr class="text-center font-weight-bold">
                                 <td colspan="6">
                                     <?php if ($totalDebit == $totalKredit && $totalDebit > 0) : ?>
-                                        <span class="badge badge-success px-4 py-2"><i class="fas fa-check-circle"></i> STATUS: BALANCED</span>
+                                        <span class="tech-tag tech-tag-green px-3 py-1 font-monospace" style="font-size: 12.5px;"><i class="fas fa-check-circle mr-1"></i> STATUS: BALANCED</span>
                                     <?php else : ?>
-                                        <span class="badge badge-danger px-4 py-2"><i class="fas fa-exclamation-triangle"></i> STATUS: UNBALANCED</span>
+                                        <span class="tech-tag tech-tag-danger px-3 py-1 font-monospace" style="font-size: 12.5px;"><i class="fas fa-exclamation-triangle mr-1"></i> STATUS: UNBALANCED</span>
                                     <?php endif; ?>
                                 </td>
                             </tr>

@@ -14,11 +14,11 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <span class="badge badge-primary px-3 py-1" style="font-family: var(--font-mono); font-size: 11px;">
+                            <span class="tech-tag tech-tag-cyan px-2 py-1" style="font-size: 11px;">
                                 <i class="fas fa-satellite-dish mr-1 text-cyan"></i> SYSTEM ONLINE
                             </span>
-                            <span class="badge badge-success px-3 py-1" style="font-family: var(--font-mono); font-size: 11px;">
-                                <i class="fas fa-check-circle mr-1"></i> VER: 2.3.5
+                            <span class="tech-tag tech-tag-green px-2 py-1" style="font-size: 11px;">
+                                <i class="fas fa-check-circle mr-1"></i> VER: 2.3.8
                             </span>
                             <span class="text-muted small font-monospace d-none d-sm-inline">// IPB_VOCATIONAL_STUDIES</span>
                         </div>
@@ -57,7 +57,7 @@
                                     <span class="status-indicator mr-2"></span>
                                     <span class="cyber-glitch font-weight-bold" data-text="OPERATOR // BAKPAUU" style="color: var(--cyan-bright); font-size: 13px;">OPERATOR // BAKPAUU</span>
                                 </div>
-                                <span class="badge badge-primary px-2 py-1" style="font-size: 9.5px; letter-spacing: 1px;">
+                                <span class="tech-tag tech-tag-cyan" style="font-size: 10px; letter-spacing: 0.8px;">
                                     [PILOT 016]
                                 </span>
                             </div>

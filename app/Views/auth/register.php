@@ -5,14 +5,14 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Register &mdash; SIA AABW</title>
 
-    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
-    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.8') ?>">
-    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.9') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.9') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.9') ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/components.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.9') ?>">
 </head>
 
 <body>

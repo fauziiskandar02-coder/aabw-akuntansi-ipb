@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="d-none d-md-block">
-            <span class="badge badge-primary px-3 py-2 font-monospace" style="letter-spacing: 1px;">
+            <span class="tech-tag tech-tag-cyan px-3 py-2">
                 <span class="status-indicator mr-2"></span>SYS_ACTIVE // VER: 2.3.8
             </span>
         </div>
@@ -84,10 +84,11 @@
             <!-- Academic Dossier / Student Profile -->
             <div class="col-lg-6 col-md-12 mb-4">
                 <div class="card h-100" style="border: 1px solid var(--border-tech); box-shadow: var(--neo-shadow-sm);">
-                    <div class="card-header" style="border-bottom: 1px solid var(--border-subtle);">
+                    <div class="card-header d-flex justify-content-between align-items-center" style="border-bottom: 1px solid var(--border-subtle);">
                         <h4 class="text-white mb-0 font-monospace">
                             <i class="fas fa-id-card mr-2 text-cyan"></i> [DOSSIER // STUDENT PROFILE]
                         </h4>
+                        <span class="tech-tag tech-tag-cyan" style="font-size: 11px;">[CLASS: C / P2]</span>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -100,6 +101,10 @@
                                     <tr>
                                         <th class="text-cyan"><i class="fas fa-fingerprint mr-2"></i>Student ID</th>
                                         <td class="text-white font-weight-bold" style="color: var(--cyan-bright) !important;">J0414241332</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-cyan"><i class="fas fa-users mr-2"></i>Class</th>
+                                        <td class="text-white font-weight-bold">C / P2 <span class="text-muted small ml-1">(Mandiri)</span></td>
                                     </tr>
                                     <tr>
                                         <th class="text-cyan"><i class="fas fa-book-reader mr-2"></i>Course</th>
