@@ -101,7 +101,7 @@
 
                     <p class="text-sub mb-4" style="line-height: 1.7; font-size: 14.5px; max-width: 600px;">
                         Enterprise-grade accounting platform automating transaction journals, general ledger postings,
-                        trial balance, adjusting entries, 10-column worksheet, and certified financial reporting.
+                        trial balance, adjusting entries, accounting worksheet, and certified financial reporting.
                     </p>
 
                     <!-- Feature Highlights -->
