@@ -33,7 +33,7 @@
                             </span>
                         </div>
 
-                        <h2 class="font-weight-bold text-white mb-2 cyber-glitch" data-text="PERUSAHAAN AKN-IPB" style="letter-spacing: -0.5px;">
+                        <h2 class="font-weight-bold text-white mb-2" style="letter-spacing: -0.5px;">
                             SIA AKN SV-IPB &mdash; <span style="color: var(--cyan-bright);">PERUSAHAAN AKN-IPB</span>
                         </h2>
 
@@ -104,7 +104,7 @@
                                     </tr>
                                     <tr>
                                         <th class="text-cyan"><i class="fas fa-users mr-2"></i>Class</th>
-                                        <td class="text-white font-weight-bold">C / P2 <span class="text-muted small ml-1">(Mandiri)</span></td>
+                                        <td class="text-white font-weight-bold">C / P2</td>
                                     </tr>
                                     <tr>
                                         <th class="text-cyan"><i class="fas fa-book-reader mr-2"></i>Course</th>
