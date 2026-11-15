@@ -40,16 +40,16 @@
                                     <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Email:</strong> <?= $user->email ?>
                                 </li>
                                 <li class="list-group-item px-0" style="background: transparent !important; color: var(--text-main) !important; border-color: var(--border-subtle) !important;">
-                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Hak Akses:</strong> <?= ucfirst($user->role ?? 'user') ?>
+                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Role:</strong> <?= ucfirst($user->role ?? 'user') ?>
                                 </li>
                                 <li class="list-group-item px-0" style="background: transparent !important; color: var(--text-main) !important; border-color: var(--border-subtle) !important;">
-                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Status Akun:</strong> <span class="badge badge-primary">Aktif</span>
+                                    <strong style="color: var(--cyan-accent) !important; font-family: var(--font-mono) !important;">Account Status:</strong> <span class="tech-tag tech-tag-cyan">ACTIVE</span>
                                 </li>
                             </ul>
 
                             <div class="w-100 float-right mt-2">
                                 <a href="<?= site_url('admin') ?>" class="btn btn-secondary">
-                                    <i class="fas fa-arrow-left"></i> Kembali ke Daftar User
+                                    <i class="fas fa-arrow-left"></i> Back to User Directory
                                 </a>
                             </div>
                         </div>

@@ -202,10 +202,10 @@ function hitungTotal() {
     $('#totalKredit').text(totalKredit.toLocaleString('id-ID'));
 
     if (totalDebit === totalKredit && totalDebit > 0) {
-        $('#balanceStatus').html('<span class="badge badge-success"><i class="fas fa-check"></i> Balance</span>');
+        $('#balanceStatus').html('<span class="tech-tag tech-tag-green"><i class="fas fa-check"></i> Balanced</span>');
         $('#btnSubmit').prop('disabled', false);
     } else {
-        $('#balanceStatus').html('<span class="badge badge-danger"><i class="fas fa-times"></i> Tidak Balance</span>');
+        $('#balanceStatus').html('<span class="tech-tag tech-tag-red"><i class="fas fa-times"></i> Unbalanced</span>');
     }
 }
 

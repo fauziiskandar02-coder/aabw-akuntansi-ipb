@@ -124,7 +124,7 @@
                                     <td id="totalDebit">0</td>
                                     <td id="totalKredit">0</td>
                                     <td colspan="2" id="balanceStatus" class="text-center">
-                                        <span class="badge badge-secondary">Belum Terisi</span>
+                                        <span class="tech-tag tech-tag-slate">Empty</span>
                                     </td>
                                 </tr>
                             </tfoot>
