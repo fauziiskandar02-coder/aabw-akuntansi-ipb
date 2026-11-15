@@ -9,9 +9,10 @@
     <?= $this->renderSection('title') ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.7') ?>">
-    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.7') ?>">
-    <link rel="apple-touch-icon" href="<?= base_url('favicon.png?v=2.3.7') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.8') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
+    <link rel="apple-touch-icon" href="<?= base_url('favicon.png?v=2.3.8') ?>">
 
     <!-- General CSS Files (CDN for deployment compatibility) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/components.css') ?>">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/custom.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.7') ?>">
+    <link rel="stylesheet" href="<?= base_url('template/assets/css/cyber_theme.css?v=2.3.8') ?>">
 </head>
 
 <body>

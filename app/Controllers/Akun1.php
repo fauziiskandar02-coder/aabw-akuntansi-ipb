@@ -33,7 +33,7 @@ class Akun1 extends BaseController
             'nama_akun1' => $this->request->getVar('nama_akun1'),
         ];
         $this->db->table('akun1s')->insert($data);
-        return redirect()->to(site_url('akun1'))->with('success', 'Data Berhasil di Simpan');
+        return redirect()->to(site_url('akun1'))->with('success', 'Data saved successfully');
     }
 
     public function edit($id = null)
@@ -58,12 +58,12 @@ class Akun1 extends BaseController
             'nama_akun1' => $this->request->getVar('nama_akun1'),
         ];
         $this->db->table('akun1s')->where(['id_akun1' => $id])->update($data);
-        return redirect()->to(site_url('akun1'))->with('success', 'Data Berhasil di Update');
+        return redirect()->to(site_url('akun1'))->with('success', 'Data updated successfully');
     }
 
     public function destroy($id = null)
     {
         $this->db->table('akun1s')->where(['id_akun1' => $id])->delete();
-        return redirect()->to(site_url('akun1'))->with('success', 'Data Berhasil di Hapus');
+        return redirect()->to(site_url('akun1'))->with('success', 'Data deleted successfully');
     }
 }

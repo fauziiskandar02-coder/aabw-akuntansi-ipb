@@ -87,7 +87,7 @@ class Penyesuaian extends ResourceController
             }
         }
 
-        return redirect()->to(site_url('penyesuaian'))->with('success', 'Data Penyesuaian Berhasil Disimpan');
+        return redirect()->to(site_url('penyesuaian'))->with('success', 'Adjustment entry saved successfully');
     }
 
     public function edit($id = null)
@@ -143,13 +143,13 @@ class Penyesuaian extends ResourceController
             }
         }
 
-        return redirect()->to(site_url('penyesuaian'))->with('success', 'Data Penyesuaian Berhasil Diupdate');
+        return redirect()->to(site_url('penyesuaian'))->with('success', 'Adjustment entry updated successfully');
     }
 
     public function delete($id = null)
     {
         $this->db->table('tbl_nilai_penyesuaian')->where('id_penyesuaian', $id)->delete();
         $this->db->table('tbl_penyesuaian')->where('id_penyesuaian', $id)->delete();
-        return redirect()->to(site_url('penyesuaian'))->with('success', 'Data Penyesuaian Berhasil Dihapus');
+        return redirect()->to(site_url('penyesuaian'))->with('success', 'Adjustment entry deleted successfully');
     }
 }

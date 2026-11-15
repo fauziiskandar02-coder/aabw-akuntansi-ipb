@@ -69,7 +69,7 @@ class Akun2 extends ResourceController
             'kode_akun1' => $this->request->getVar('kode_akun1'),
         ];
         $this->db->table('akun2s')->insert($data);
-        return redirect()->to(site_url('akun2'))->with('success', 'Data Berhasil di Simpan');
+        return redirect()->to(site_url('akun2'))->with('success', 'Data saved successfully');
     }
 
     /**
@@ -109,7 +109,7 @@ class Akun2 extends ResourceController
             'kode_akun1' => $this->request->getVar('kode_akun1'),
         ];
         $this->db->table('akun2s')->where(['id_akun2' => $id])->update($data);
-        return redirect()->to(site_url('akun2'))->with('success', 'Data Berhasil di Update');
+        return redirect()->to(site_url('akun2'))->with('success', 'Data updated successfully');
     }
 
     /**
@@ -122,6 +122,6 @@ class Akun2 extends ResourceController
     public function delete($id = null)
     {
         $this->db->table('akun2s')->where(['id_akun2' => $id])->delete();
-        return redirect()->to(site_url('akun2'))->with('success', 'Data Berhasil di Hapus');
+        return redirect()->to(site_url('akun2'))->with('success', 'Data deleted successfully');
     }
 }

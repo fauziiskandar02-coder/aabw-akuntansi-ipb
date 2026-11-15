@@ -5,7 +5,9 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Login &mdash; SIA AABW</title>
 
-    <link rel="icon" type="image/jpeg" href="<?= base_url('template/assets/img/aabw_avatar.jpg') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.8') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
@@ -24,7 +26,7 @@
                         </div>
 
                         <div class="card card-primary">
-                            <div class="card-header"><h4>Login Pengguna</h4></div>
+                            <div class="card-header"><h4>User Login</h4></div>
 
                             <div class="card-body">
                                 <?php if (session()->getFlashdata('error')) : ?>
@@ -48,15 +50,15 @@
                                 <form method="POST" action="<?= site_url('login') ?>">
                                     <?= csrf_field() ?>
                                     <div class="form-group">
-                                        <label for="login">Username atau Email</label>
-                                        <input id="login" type="text" class="form-control" name="login" tabindex="1" required autofocus placeholder="Masukkan username/email">
+                                        <label for="login">Username or Email</label>
+                                        <input id="login" type="text" class="form-control" name="login" tabindex="1" required autofocus placeholder="Enter username/email">
                                     </div>
 
                                     <div class="form-group">
                                         <div class="d-block">
                                             <label for="password" class="control-label">Password</label>
                                         </div>
-                                        <input id="password" type="password" class="form-control" name="password" tabindex="2" required placeholder="Masukkan password">
+                                        <input id="password" type="password" class="form-control" name="password" tabindex="2" required placeholder="Enter password">
                                     </div>
 
                                     <div class="form-group">
@@ -67,7 +69,7 @@
                                 </form>
 
                                 <div class="text-center text-muted mt-3">
-                                    Belum punya akun? <a href="<?= site_url('register') ?>">Daftar di sini</a>
+                                    Don't have an account? <a href="<?= site_url('register') ?>">Register here</a>
                                 </div>
                             </div>
                         </div>

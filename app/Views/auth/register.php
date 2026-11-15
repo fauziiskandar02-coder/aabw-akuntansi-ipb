@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Registrasi &mdash; SIA AABW</title>
+    <title>Register &mdash; SIA AABW</title>
 
-    <link rel="icon" type="image/jpeg" href="<?= base_url('template/assets/img/aabw_avatar.jpg') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('favicon.png?v=2.3.8') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon.ico?v=2.3.8') ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('template/assets/css/style.css') ?>">
@@ -24,7 +26,7 @@
                         </div>
 
                         <div class="card card-primary">
-                            <div class="card-header"><h4>Registrasi Pengguna Baru</h4></div>
+                            <div class="card-header"><h4>New User Registration</h4></div>
 
                             <div class="card-body">
                                 <?php if (session()->getFlashdata('error')) : ?>
@@ -39,41 +41,41 @@
                                 <form method="POST" action="<?= site_url('register') ?>">
                                     <?= csrf_field() ?>
                                     <div class="form-group">
-                                        <label for="fullname">Nama Lengkap</label>
-                                        <input id="fullname" type="text" class="form-control" name="fullname" required autofocus placeholder="Nama lengkap Anda">
+                                        <label for="fullname">Full Name</label>
+                                        <input id="fullname" type="text" class="form-control" name="fullname" required autofocus placeholder="Your full name">
                                     </div>
 
                                     <div class="row">
                                         <div class="form-group col-6">
                                             <label for="username">Username</label>
-                                            <input id="username" type="text" class="form-control" name="username" required placeholder="Username unik">
+                                            <input id="username" type="text" class="form-control" name="username" required placeholder="Unique username">
                                         </div>
                                         <div class="form-group col-6">
                                             <label for="email">Email</label>
-                                            <input id="email" type="email" class="form-control" name="email" required placeholder="email@contoh.com">
+                                            <input id="email" type="email" class="form-control" name="email" required placeholder="email@example.com">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="form-group col-6">
                                             <label for="password" class="d-block">Password</label>
-                                            <input id="password" type="password" class="form-control" name="password" required placeholder="Minimal 6 karakter">
+                                            <input id="password" type="password" class="form-control" name="password" required placeholder="Min. 6 characters">
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="pass_confirm" class="d-block">Konfirmasi Password</label>
-                                            <input id="pass_confirm" type="password" class="form-control" name="pass_confirm" required placeholder="Ulangi password">
+                                            <label for="pass_confirm" class="d-block">Confirm Password</label>
+                                            <input id="pass_confirm" type="password" class="form-control" name="pass_confirm" required placeholder="Repeat password">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                            <i class="fas fa-user-plus"></i> Daftar Akun
+                                            <i class="fas fa-user-plus"></i> Register
                                         </button>
                                     </div>
                                 </form>
 
                                 <div class="text-center text-muted mt-3">
-                                    Sudah punya akun? <a href="<?= site_url('login') ?>">Masuk ke sini</a>
+                                    Already have an account? <a href="<?= site_url('login') ?>">Sign in here</a>
                                 </div>
                             </div>
                         </div>

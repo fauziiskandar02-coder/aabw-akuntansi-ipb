@@ -87,7 +87,7 @@ class Transaksi extends ResourceController
             }
         }
 
-        return redirect()->to(site_url('transaksi'))->with('success', 'Data Transaksi Berhasil Disimpan');
+        return redirect()->to(site_url('transaksi'))->with('success', 'Transaction saved successfully');
     }
 
     public function edit($id = null)
@@ -142,14 +142,14 @@ class Transaksi extends ResourceController
             }
         }
 
-        return redirect()->to(site_url('transaksi'))->with('success', 'Data Transaksi Berhasil Diupdate');
+        return redirect()->to(site_url('transaksi'))->with('success', 'Transaction updated successfully');
     }
 
     public function delete($id = null)
     {
         $this->db->table('tbl_nilai')->where('id_transaksi', $id)->delete();
         $this->db->table('tbl_transaksi')->where('id_transaksi', $id)->delete();
-        return redirect()->to(site_url('transaksi'))->with('success', 'Data Transaksi Berhasil Dihapus');
+        return redirect()->to(site_url('transaksi'))->with('success', 'Transaction deleted successfully');
     }
 
     public function akun3()

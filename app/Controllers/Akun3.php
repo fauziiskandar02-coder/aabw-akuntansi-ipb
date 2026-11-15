@@ -44,7 +44,7 @@ class Akun3 extends ResourceController
             'kode_akun2' => $this->request->getVar('kode_akun2'),
         ];
         $this->db->table('akun3s')->insert($data);
-        return redirect()->to(site_url('akun3'))->with('success', 'Data Berhasil di Simpan');
+        return redirect()->to(site_url('akun3'))->with('success', 'Data saved successfully');
     }
 
     public function edit($id = null)
@@ -69,12 +69,12 @@ class Akun3 extends ResourceController
             'kode_akun2' => $this->request->getVar('kode_akun2'),
         ];
         $this->db->table('akun3s')->where(['id_akun3' => $id])->update($data);
-        return redirect()->to(site_url('akun3'))->with('success', 'Data Berhasil di Update');
+        return redirect()->to(site_url('akun3'))->with('success', 'Data updated successfully');
     }
 
     public function delete($id = null)
     {
         $this->db->table('akun3s')->where(['id_akun3' => $id])->delete();
-        return redirect()->to(site_url('akun3'))->with('success', 'Data Berhasil di Hapus');
+        return redirect()->to(site_url('akun3'))->with('success', 'Data deleted successfully');
     }
 }

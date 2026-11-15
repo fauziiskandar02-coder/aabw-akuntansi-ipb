@@ -66,7 +66,7 @@
                                         <form action="<?= site_url('akun2/' . $values->id_akun2) ?>" method="post" id="del-<?= $values->id_akun2 ?>" class="d-inline">
                                             <?= csrf_field() ?>
                                             <input type="hidden" name="_method" value="DELETE">
-                                            <button class="btn btn-danger btn-small" data-confirm="Hapus Data...? | Apakah Anda Yakin...?" data-confirm-yes="hapus(<?= $values->id_akun2 ?>)"><i class="fas fa-trash"></i> Del </button>
+                                            <button class="btn btn-danger btn-small" data-confirm="Delete Account 2? | Are you sure...?" data-confirm-yes="hapus(<?= $values->id_akun2 ?>)"><i class="fas fa-trash"></i> Del </button>
 
                                         </form>
                                     </td>
